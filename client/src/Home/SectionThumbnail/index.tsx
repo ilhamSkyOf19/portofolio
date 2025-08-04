@@ -12,13 +12,14 @@ import { useButtonHref } from '../../hook/useButtonHref';
 import { FaGithub, FaInstagram, FaReact } from 'react-icons/fa';
 import BoxIcon from '../../components/BoxIcon';
 import { SiExpress, SiNextdotjs } from 'react-icons/si';
+import TextNormal from '../../components/TextNormal';
 
 const SectionThumbnail: FC = () => {
     // state 
 
 
     return (
-        <section className='w-full flex flex-col justify-start items-center min-h-[100vh] bg-tertiary-light pb-24'>
+        <section id='home' className='w-full flex flex-col justify-start items-center min-h-[100vh] bg-tertiary-light pb-24'>
             {/* img */}
             <ThumbnailImage />
             {/* text */}
@@ -51,7 +52,7 @@ const ThumbnailImage: FC = () => {
             {/* img */}
             <div className='w-[96%] h-full absolute bottom-0 flex flex-col justify-start items-center overflow-hidden rounded-lg'>
                 <div className='w-[100%] h-full rounded-lg  flex flex-col justify-end items-center relative'>
-                    <LazyImage src={personHd} alt='logo' className='w-[88%] h-full object-cover z-2' />
+                    <LazyImage src={personHd} alt='logo' className='w-[90%] h-full object-cover z-2' />
 
                     {/* shadow bottom */}
                     <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white/20 to-transparent opacity-15 pointer-events-none z-1" />
@@ -90,9 +91,9 @@ const Describe: FC = () => {
                 </div>
             </div>
             {/* description */}
-            <p className='text-md text-text-primary opacity-80 tracking-[0.1rem] mt-5'>
+            <TextNormal classname='mt-6 tracking-[0.05rem] leading-[1.7rem]'>
                 I am a Junior Full Stack Web Developer focused on creating modern, responsive, and efficient web applications, ready to contribute in a professional and collaborative environment.
-            </p>
+            </TextNormal>
         </div>
     )
 }

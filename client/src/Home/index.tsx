@@ -1,13 +1,13 @@
 import { type FC } from 'react'
 import LayoutPage from '../layouts/LayoutPage'
 import SectionThumbnail from './SectionThumbnail'
-import SectionWhatIDo from './SectionWhatIDo'
+import Features from './SectionFeatures'
 
 const Home: FC = () => {
     return (
         <LayoutPage>
             <SectionThumbnail />
-            <SectionWhatIDo />
+            <Features />
         </LayoutPage>
     )
 }

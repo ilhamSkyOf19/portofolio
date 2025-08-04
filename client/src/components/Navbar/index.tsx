@@ -1,10 +1,10 @@
 import { type FC } from 'react'
-import LazyImage from '../LazyImage'
 import { useWindowSize } from '../../hook/useWindowSize'
 
 
 // icons
 import { HiBars3 } from "react-icons/hi2";
+import Logo from '../Logo';
 
 // type props 
 type Props = {
@@ -20,11 +20,7 @@ const Navbar: FC<Props> = ({ setSideBar, barRef }) => {
             {/* icon */}
             <div className='flex-1 flex flex-row justify-start items-center gap-4'>
                 {/* logo */}
-                <div className='w-13 h-13 rounded-full border-1 border-[rgba(255,255,255,0.4)] '>
-                    <div className='w-full h-full flex flex-col justify-center items-center'>
-                        <LazyImage src='/vite.svg' alt='logo' className='w-full h-full object-cover' />
-                    </div>
-                </div>
+                <Logo />
                 {/* title */}
                 <h2 className='text-lg font-semibold uppercase text-text-primary font-Poppins'>
                     portofolio

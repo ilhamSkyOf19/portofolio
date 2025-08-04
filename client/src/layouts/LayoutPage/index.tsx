@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState, type FC, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type FC, type ReactNode } from 'react'
 import Navbar from '../../components/Navbar';
 import { useWindowSize } from '../../hook/useWindowSize';
 import SideNavbar from '../../components/SideNavbar';
@@ -34,9 +34,6 @@ const LayoutPage: FC<Props> = ({ children }) => {
         };
     }, [dropDownRef, barRef])
 
-    useEffect(() => {
-        console.log(sideBar);
-    }, [sideBar])
 
 
 
@@ -44,15 +41,14 @@ const LayoutPage: FC<Props> = ({ children }) => {
     const { device } = useWindowSize();
 
     // memo children
-    const memoizedChildren = useMemo(() => children, []);
 
     return (
         <div className='w-full flex flex-col justify-start items-center min-h-screen relative'>
             <Navbar setSideBar={SetSideBar} barRef={barRef} />
             {device === "mobile" && (
-                <SideNavbar propsRef={dropDownRef} active={sideBar} />
+                <SideNavbar propsRef={dropDownRef} active={sideBar} setSideBar={SetSideBar} />
             )}
-            {memoizedChildren}
+            {children}
         </div>
     )
 }

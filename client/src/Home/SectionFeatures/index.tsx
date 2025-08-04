@@ -1,4 +1,4 @@
-import { type FC } from 'react'
+import { memo, type FC } from 'react'
 import SubJudulPrimaryMedium from '../../components/SubJudulPrimaryMedium'
 import JudulSection from '../../components/JudulSection'
 import { useButtonHref } from '../../hook/useButtonHref';
@@ -9,9 +9,9 @@ import { CiGlobe, CiMobile3 } from "react-icons/ci";
 import { FaCode } from 'react-icons/fa6';
 
 
-const SectionWhatIDo: FC = () => {
+const Features: FC = () => {
     return (
-        <section className='bg-tertiary-light w-full min-h-lvh mt-0.5 flex flex-col justify-start items-items py-18'>
+        <section id='features' className='bg-tertiary-light w-full min-h-lvh mt-0.5 flex flex-col justify-start items-items py-18'>
             {/* title */}
             <div className='w-full flex flex-col justify-start items-center gap-4'>
                 <SubJudulPrimaryMedium text='features' />
@@ -48,4 +48,4 @@ const ContentCard: FC = () => {
 
 
 
-export default SectionWhatIDo
+export default memo(Features); 
