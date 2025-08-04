@@ -4,7 +4,7 @@ import { Typewriter } from 'react-simple-typewriter';
 
 // img
 import personHd from '../../assets/img/person/person-hd.png';
-import SubjudulMedium from '../../components/SubjudulMedium';
+import SubjudulMedium from '../../components/SubJudulMedium';
 // icons
 import { FiFacebook } from "react-icons/fi";
 import BoxHrefIcon from '../../components/BoxHrefIcon';
@@ -24,7 +24,7 @@ const SectionThumbnail: FC = () => {
             {/* text */}
             <Describe />
             {/* social media */}
-            <div className='w-full flex flex-col justify-start items-start gap-6 px-2 mt-6'>
+            <div className='w-full flex flex-col justify-start items-start gap-6 px-2 mt-12'>
                 {/* subjudul social media  */}
                 <SubjudulMedium text='find with me' />
                 {/* social media */}
@@ -93,7 +93,6 @@ const Describe: FC = () => {
             <p className='text-md text-text-primary opacity-80 tracking-[0.1rem] mt-5'>
                 I am a Junior Full Stack Web Developer focused on creating modern, responsive, and efficient web applications, ready to contribute in a professional and collaborative environment.
             </p>
-
         </div>
     )
 }

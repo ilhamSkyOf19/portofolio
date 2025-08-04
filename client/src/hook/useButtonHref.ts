@@ -19,9 +19,9 @@ export const useButtonHref = (type: 'div' | 'a') => {
             }
         }
 
-        document.addEventListener("mousedown", handleMouseDown);
+        document.addEventListener("click", handleMouseDown);
         return () => {
-            document.removeEventListener("mousedown", handleMouseDown);
+            document.removeEventListener("click", handleMouseDown);
         };
     }, [buttonRef])
 

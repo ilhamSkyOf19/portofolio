@@ -1,14 +1,13 @@
 import { type FC } from 'react'
 import LayoutPage from '../layouts/LayoutPage'
 import SectionThumbnail from './SectionThumbnail'
+import SectionWhatIDo from './SectionWhatIDo'
 
 const Home: FC = () => {
     return (
         <LayoutPage>
             <SectionThumbnail />
-            <div className='w-full min-h-lvh bg-white'>
-
-            </div>
+            <SectionWhatIDo />
         </LayoutPage>
     )
 }
