@@ -21,7 +21,7 @@ const CardWhatIDo: FC<Props> = ({ click, ref, icon: Icon, title, desc }) => {
             {/* shadow */}
             <ShadowBox rounded='xl' />
             <div className={clsx(
-                'w-full h-full z-2  flex flex-col justify-start items-start gap-3 pt-4 px-3 overflow-hidden transition-all duration-300 ease-in-out rounded-xl',
+                'w-full h-full z-2  flex flex-col justify-start items-start gap-3 pt-4 px-5.5 overflow-hidden transition-all duration-300 ease-in-out rounded-xl',
                 click ? 'bg-tertiary-dark' : 'bg-tertiary-light'
             )}>
                 <div className={clsx(

@@ -50,7 +50,7 @@ const SectionMyProtofolio: FC = () => {
 
 
     return (
-        <section id='portfolio' className='w-full min-h-[100vh] flex flex-col justify-start items-center bg-tertiary-light pt-12 gap-16 relative'>
+        <section id='portfolio' className='w-full min-h-[100vh] flex flex-col justify-start items-center bg-tertiary-light py-12 gap-16 relative'>
             {/* title */}
             <TitleSection subJudul='visit my portofolio and keep your feedback' title='my portfolio' />
 

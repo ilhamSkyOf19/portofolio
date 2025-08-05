@@ -3,6 +3,7 @@ import LayoutPage from '../layouts/LayoutPage'
 import SectionThumbnail from './SectionThumbnail'
 import Features from './SectionFeatures'
 import SectionMyProtofolio from './SectionMyProtofolio'
+import SectionAbout from './SectionAbout'
 
 const Home: FC = () => {
     return (
@@ -10,6 +11,7 @@ const Home: FC = () => {
             <SectionThumbnail />
             <Features />
             <SectionMyProtofolio />
+            <SectionAbout />
         </LayoutPage>
     )
 }

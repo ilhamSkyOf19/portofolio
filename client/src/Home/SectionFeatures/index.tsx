@@ -26,14 +26,13 @@ const ContentCard: FC = () => {
     return (
         <div className='w-full flex flex-col justify-start items-center px-2.5 gap-12 pt-12'>
             {/* web devlopment */}
-            <CardWhatIDo title='Web Devlopment' icon={CiGlobe} desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos amet consectetur adipisicing elit.  .' ref={webDevlopment.buttonRef as React.RefObject<HTMLDivElement>} click={webDevlopment.mouseDown} />
+            <CardWhatIDo title='Web Devlopment' icon={CiGlobe} desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos amet consectetur adipisicing elit.' ref={webDevlopment.buttonRef as React.RefObject<HTMLDivElement>} click={webDevlopment.mouseDown} />
 
             {/* App Devlopment */}
-            <CardWhatIDo title='Mobile Devlopment' icon={CiMobile3} desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos amet consectetur adipisicing elit.  .' ref={mobileDevlopment.buttonRef as React.RefObject<HTMLDivElement>} click={mobileDevlopment.mouseDown} />
+            <CardWhatIDo title='Mobile Devlopment' icon={CiMobile3} desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos amet consectetur adipisicing elit.' ref={mobileDevlopment.buttonRef as React.RefObject<HTMLDivElement>} click={mobileDevlopment.mouseDown} />
 
             {/* full stack */}
-            <CardWhatIDo title='Mobile Devlopment' icon={FaCode} desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos amet consectetur adipisicing elit.  .' ref={fullStack.buttonRef as React.RefObject<HTMLDivElement>} click={fullStack.mouseDown} />
-
+            <CardWhatIDo title='Mobile Devlopment' icon={FaCode} desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos amet consectetur adipisicing elit.' ref={fullStack.buttonRef as React.RefObject<HTMLDivElement>} click={fullStack.mouseDown} />
         </div>
     )
 }
