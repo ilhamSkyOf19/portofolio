@@ -46,8 +46,8 @@ const SideNavbar: FC<Props> = ({ propsRef, active, setSideBar }) => {
         { id: "features", label: "features" },
         { id: "portfolio", label: "portfolio" },
         { id: "about", label: "about" },
-        { id: "skills", label: "skills" },
         { id: "resume", label: "resume" },
+        { id: "skills", label: "skills" },
         { id: "contact", label: "contact" },
     ]
 

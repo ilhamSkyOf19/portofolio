@@ -31,7 +31,7 @@ const SectionAbout: FC = () => {
 
 
     return (
-        <div id='about' className='w-full min-h-[100vh] bg-tertiary-light py-16 px-3'>
+        <section id='about' className='w-full min-h-[100vh] bg-tertiary-light py-16 px-3'>
             {/* title section */}
             <div className='w-full flex flex-row justify-center items-center mb-12'>
                 {/* title */}
@@ -52,7 +52,7 @@ const SectionAbout: FC = () => {
             </div>
 
             {/* desc */}
-            <div className='w-full flex flex-col justify-start items-start gap-4 pt-8'>
+            <div id='resume' className='w-full flex flex-col justify-start items-start gap-4 pt-8'>
                 {/* title */}
                 <h2 className='text-2xl font-semibold text-white'>
                     A Short Introduction <br></br> About Me
@@ -80,8 +80,7 @@ const SectionAbout: FC = () => {
                     download resume
                 </button>
             </div>
-
-        </div>
+        </section>
     )
 }
 

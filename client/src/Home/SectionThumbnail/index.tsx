@@ -9,9 +9,7 @@ import SubjudulMedium from '../../components/SubJudulMedium';
 import { FiFacebook } from "react-icons/fi";
 import BoxHrefIcon from '../../components/BoxHrefIcon';
 import { useButtonHref } from '../../hook/useButtonHref';
-import { FaGithub, FaInstagram, FaReact } from 'react-icons/fa';
-import BoxIcon from '../../components/BoxIcon';
-import { SiExpress, SiNextdotjs } from 'react-icons/si';
+import { FaGithub, FaInstagram } from 'react-icons/fa';
 import TextNormal from '../../components/TextNormal';
 
 const SectionThumbnail: FC = () => {
@@ -30,14 +28,6 @@ const SectionThumbnail: FC = () => {
                 <SubjudulMedium text='find with me' />
                 {/* social media */}
                 <SocialMedia />
-            </div>
-
-            {/* skills */}
-            <div className='w-full flex flex-col justify-start items-start gap-6 px-2 mt-10'>
-                {/* subjudul skill */}
-                <SubjudulMedium text='best skill on' />
-                {/* skill */}
-                <Skill />
             </div>
         </section>
     )
@@ -118,28 +108,5 @@ const SocialMedia: FC = () => {
     )
 }
 
-// skill
-const Skill: FC = () => {
-
-    // skill use hook
-    const [reactButton, expressButton, nextButton] = [
-        useButtonHref("div"),
-        useButtonHref("div"),
-        useButtonHref("div"),
-    ];
-
-    return (
-        <div className='w-full flex flex-row justify-start items-center gap-6'>
-            {/* react */}
-            <BoxIcon buttonRef={reactButton.buttonRef as RefObject<HTMLDivElement>} mouseDown={reactButton.mouseDown} icon={FaReact} colorIcon='text-[#61DBFB]' />
-
-            {/* express */}
-            <BoxIcon buttonRef={expressButton.buttonRef as RefObject<HTMLDivElement>} mouseDown={expressButton.mouseDown} icon={SiExpress} colorIcon='text-white' />
-
-            {/* next */}
-            <BoxIcon buttonRef={nextButton.buttonRef as RefObject<HTMLDivElement>} mouseDown={nextButton.mouseDown} icon={SiNextdotjs} colorIcon='text-white' />
-        </div>
-    )
-}
 
 export default memo(SectionThumbnail);
