@@ -16,7 +16,7 @@ const Navbar: FC<Props> = ({ setSideBar, barRef }) => {
     //  get size 
     const { device } = useWindowSize();
     return (
-        <nav className='w-full min-h-20 flex flex-row justify-between items-center fixed top-0 left-0 z-50 bg-tertiary-light px-5 py-4'>
+        <nav className='w-full min-h-20 flex flex-row justify-between items-center fixed top-0 left-0 z-40 bg-tertiary-light px-5 py-4'>
             {/* icon */}
             <div className='flex-1 flex flex-row justify-start items-center gap-4'>
                 {/* logo */}

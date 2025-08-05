@@ -3,14 +3,17 @@ import { type FC } from 'react'
 
 type Props = {
     children: string;
+    size?: string;
     classname?: string
 }
 
-const TextNormal: FC<Props> = ({ children, classname }) => {
+const TextNormal: FC<Props> = ({ size, children, classname }) => {
     return (
         <p className={clsx(
-            'text-md font-normal text-text-primary opacity-80 ',
+            ' font-normal text-text-primary opacity-80 ',
             classname,
+            size ? size : 'text-md',
+
         )}>
             {children}
         </p>

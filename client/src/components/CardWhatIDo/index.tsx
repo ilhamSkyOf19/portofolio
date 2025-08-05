@@ -8,17 +8,16 @@ import clsx from "clsx"
 type Props = {
     ref: React.RefObject<HTMLDivElement>,
     click: boolean,
-    setClick: React.Dispatch<React.SetStateAction<boolean>>
     icon: IconType;
     title: string;
     desc: string;
 }
 
 // cart 
-const CardWhatIDo: FC<Props> = ({ click, setClick, ref, icon: Icon, title, desc }) => {
+const CardWhatIDo: FC<Props> = ({ click, ref, icon: Icon, title, desc }) => {
 
     return (
-        <div ref={ref} className='w-full h-[19rem] relative' onClick={() => setClick(!click)}>
+        <div ref={ref} className='w-full h-[19rem] relative' >
             {/* shadow */}
             <ShadowBox rounded='xl' />
             <div className={clsx(

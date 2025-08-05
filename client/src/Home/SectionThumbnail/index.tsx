@@ -109,11 +109,11 @@ const SocialMedia: FC = () => {
     return (
         <div className='w-full flex flex-row justify-start items-center gap-6'>
             {/* facebook */}
-            <BoxHrefIcon buttonRef={buttonfacebook.buttonRef as RefObject<HTMLAnchorElement>} mouseDown={buttonfacebook.mouseDown} setMouseDown={buttonfacebook.setMouseDown} link='https://www.facebook.com/IlhamRizky' icon={FiFacebook} />
+            <BoxHrefIcon buttonRef={buttonfacebook.buttonRef as RefObject<HTMLAnchorElement>} mouseDown={buttonfacebook.mouseDown} link='https://www.facebook.com/IlhamRizky' icon={FiFacebook} />
             {/* instagram */}
-            <BoxHrefIcon buttonRef={buttonInstagram.buttonRef as RefObject<HTMLAnchorElement>} mouseDown={buttonInstagram.mouseDown} setMouseDown={buttonInstagram.setMouseDown} link='https://www.facebook.com/IlhamRizky' icon={FaInstagram} />
+            <BoxHrefIcon buttonRef={buttonInstagram.buttonRef as RefObject<HTMLAnchorElement>} mouseDown={buttonInstagram.mouseDown} link='https://www.facebook.com/IlhamRizky' icon={FaInstagram} />
             {/* github */}
-            <BoxHrefIcon buttonRef={buttonGithub.buttonRef as RefObject<HTMLAnchorElement>} mouseDown={buttonGithub.mouseDown} setMouseDown={buttonGithub.setMouseDown} link='https://github.com/ilhamSkyOf19' icon={FaGithub} />
+            <BoxHrefIcon buttonRef={buttonGithub.buttonRef as RefObject<HTMLAnchorElement>} mouseDown={buttonGithub.mouseDown} link='https://github.com/ilhamSkyOf19' icon={FaGithub} />
         </div>
     )
 }
@@ -131,13 +131,13 @@ const Skill: FC = () => {
     return (
         <div className='w-full flex flex-row justify-start items-center gap-6'>
             {/* react */}
-            <BoxIcon buttonRef={reactButton.buttonRef as RefObject<HTMLDivElement>} mouseDown={reactButton.mouseDown} setMouseDown={reactButton.setMouseDown} icon={FaReact} colorIcon='text-[#61DBFB]' />
+            <BoxIcon buttonRef={reactButton.buttonRef as RefObject<HTMLDivElement>} mouseDown={reactButton.mouseDown} icon={FaReact} colorIcon='text-[#61DBFB]' />
 
             {/* express */}
-            <BoxIcon buttonRef={expressButton.buttonRef as RefObject<HTMLDivElement>} mouseDown={expressButton.mouseDown} setMouseDown={expressButton.setMouseDown} icon={SiExpress} colorIcon='text-white' />
+            <BoxIcon buttonRef={expressButton.buttonRef as RefObject<HTMLDivElement>} mouseDown={expressButton.mouseDown} icon={SiExpress} colorIcon='text-white' />
 
             {/* next */}
-            <BoxIcon buttonRef={nextButton.buttonRef as RefObject<HTMLDivElement>} mouseDown={nextButton.mouseDown} setMouseDown={nextButton.setMouseDown} icon={SiNextdotjs} colorIcon='text-white' />
+            <BoxIcon buttonRef={nextButton.buttonRef as RefObject<HTMLDivElement>} mouseDown={nextButton.mouseDown} icon={SiNextdotjs} colorIcon='text-white' />
         </div>
     )
 }

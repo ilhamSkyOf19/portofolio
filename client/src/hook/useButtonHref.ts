@@ -25,5 +25,5 @@ export const useButtonHref = (type: 'div' | 'a') => {
         };
     }, [buttonRef])
 
-    return { buttonRef, mouseDown, setMouseDown };
+    return { buttonRef, mouseDown };
 }

@@ -40,7 +40,7 @@ const LayoutPage: FC<Props> = ({ children }) => {
     // get device
     const { device } = useWindowSize();
 
-    // memo children
+
 
     return (
         <div className='w-full flex flex-col justify-start items-center min-h-screen relative'>
