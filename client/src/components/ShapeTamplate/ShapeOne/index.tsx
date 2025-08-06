@@ -8,7 +8,7 @@ type Props = {
 }
 const ShapeOne: FC<Props> = ({ color, children }) => {
     return (
-        <div className='h-full w-full bg-black rounded-2xl relative flex flex-col justify-center items-center overflow-hidden z-10'>
+        <div className='h-full w-full bg-black rounded-2xl relative flex flex-col justify-center items-center overflow-hidden z-10 group'>
             {/* shape */}
             {/* bottom left */}
             <ShapeRound color={color} size={4.5} position={[0, '', '', 0]} opacity={0.3} />

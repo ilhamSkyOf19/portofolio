@@ -50,17 +50,17 @@ const SectionMyProtofolio: FC = () => {
 
 
     return (
-        <section id='portfolio' className='w-full min-h-[100vh] flex flex-col justify-start items-center bg-tertiary-light py-12 relative'>
+        <section id='portfolio' className='w-full h-auto flex flex-col justify-start items-center bg-tertiary-light py-12 relative'>
             {/* title */}
             <TitleSection subJudul='visit my portofolio and keep your feedback' title='my portfolio' />
 
             {/* container card */}
-            <div ref={cardRef} className='w-full flex flex-col justify-start items-center gap-10 px-3'>
+            <div ref={cardRef} className='w-full grid grid-cols-1 gap-10 px-3 md:grid-cols-2 lg:grid-cols-3 lg:place-content-center'>
                 <CardPortofolio
                     id='1'
                     shape={
                         <ShapeOne color='#87ceeb'>
-                            <LazyImage alt='mockup' src={mockup1} className='w-full h-full object-cover' />
+                            <LazyImage alt='mockup' src={mockup1} className='w-full h-full object-cover md:group-hover:md:scale-110' />
                         </ShapeOne>
                     }
                     type='development'
@@ -71,7 +71,7 @@ const SectionMyProtofolio: FC = () => {
                     id='2'
                     shape={
                         <ShapeTwo color='#fbbf24'>
-                            <LazyImage alt='mockup' src={mockup2} className='w-full h-full object-cover' />
+                            <LazyImage alt='mockup' src={mockup2} className='w-full h-full object-cover md:group-hover:md:scale-110' />
                         </ShapeTwo>
                     }
                     type='development'

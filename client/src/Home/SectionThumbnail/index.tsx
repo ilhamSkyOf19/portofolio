@@ -14,17 +14,19 @@ const SectionThumbnail: FC = () => {
 
 
     return (
-        <section id='home' className='w-full flex flex-col justify-start items-center min-h-[100vh] bg-tertiary-light pb-24'>
+        <section id='home' className='w-full flex flex-col justify-start items-center h-auto bg-tertiary-light pb-24 lg:flex-row-reverse lg:items-start line-black'>
             {/* img */}
             <ThumbnailImage />
-            {/* text */}
-            <Describe />
-            {/* social media */}
-            <div className='w-full flex flex-col justify-start items-start gap-6 px-2 mt-12'>
-                {/* subjudul social media  */}
-                <SubjudulMedium text='find with me' />
+            <div className='flex flex-col justify-start items-start lg:pt-20'>
+                {/* text */}
+                <Describe />
                 {/* social media */}
-                <SocialMedia />
+                <div className='w-full flex flex-col justify-start items-start gap-6 px-2 mt-12 md:mt-4'>
+                    {/* subjudul social media  */}
+                    <SubjudulMedium text='find with me' />
+                    {/* social media */}
+                    <SocialMedia />
+                </div>
             </div>
         </section>
     )
@@ -34,12 +36,12 @@ const SectionThumbnail: FC = () => {
 // component thumbnail image
 const ThumbnailImage: FC = () => {
     return (
-        <div className='h-[36rem] w-full flex flex-row justify-center items-start relative pt-48'>
+        <div className='h-[36rem] w-full flex flex-row justify-center items-start relative pt-48 md:h-[60rem] lg:h-[40rem]'>
             <div className='w-[96%] h-[55%] shadow-[0_-20px_30px_rgba(255,255,255,0.03)] rounded-lg ' />
             {/* img */}
-            <div className='w-[96%] h-full absolute bottom-0 flex flex-col justify-start items-center overflow-hidden rounded-lg'>
+            <div className='w-[96%] h-full absolute bottom-0 flex flex-col justify-start items-center overflow-hidden rounded-lg '>
                 <div className='w-[100%] h-full rounded-lg  flex flex-col justify-end items-center relative'>
-                    <LazyImage src={personHd} alt='logo' className='w-[90%] h-full object-cover z-2' />
+                    <LazyImage src={personHd} alt='logo' className='w-[100%] h-[34rem] object-cover z-2 md:w-[100%] md:h-[60rem] lg:h-[36rem]' />
 
                     {/* shadow bottom */}
                     <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white/20 to-transparent opacity-15 pointer-events-none z-1" />
@@ -53,7 +55,7 @@ const ThumbnailImage: FC = () => {
 // component describe
 const Describe: FC = () => {
     return (
-        <div className='h-[20rem] w-full flex flex-col justify-start items-start pt-8 px-2'>
+        <div className='h-[20rem] w-full flex flex-col justify-start items-start pt-8 px-2 md:pt-12'>
             {/* subjudul 1 */}
             <SubjudulMedium text='welcome to my world' />
 

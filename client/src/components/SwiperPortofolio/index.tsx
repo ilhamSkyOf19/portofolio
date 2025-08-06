@@ -27,17 +27,17 @@ const SwiperPortofolio: FC<Props> = ({ mockup }) => {
         <div className='w-full h-full flex flex-col justify-center items-center relative'>
             {/* prev */}
             <button type='button' className={clsx(
-                'prev-button absolute -left-0 top-1/2 -translate-y-1/2 w- p-5 z-10 hover:text-blue-600 transition-all duration-300 ease-in-out',
+                'prev-button absolute -left-0 top-1/2 -translate-y-1/2 w- p-5 z-10 transition-all duration-300 ease-in-out cursor-pointer hover:opacity-100',
                 active === 0 ? 'opacity-0 pointer-events-none' : 'opacity-60 pointer-events-auto'
             )}>
-                <FaArrowLeft className='text-white text-xl' />
+                <FaArrowLeft className='text-white text-xl md:text-3xl' />
             </button>
             {/* next */}
             <button type='button' className={clsx(
-                'next-button absolute -right-0 top-1/2 -translate-y-1/2 w- p-5 z-10 hover:text-blue-600 duration-300 ease-in-out',
+                'next-button absolute -right-0 top-1/2 -translate-y-1/2 w- p-5 z-10  duration-300 ease-in-out cursor-pointer hover:opacity-100',
                 active === 2 ? 'opacity-0 pointer-events-none' : 'opacity-60 pointer-events-auto'
             )}>
-                <FaArrowRight className='text-white text-xl' />
+                <FaArrowRight className='text-white text-xl md:text-3xl' />
             </button>
             <Swiper
                 modules={[Navigation]}

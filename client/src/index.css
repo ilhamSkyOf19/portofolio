@@ -77,7 +77,7 @@
 
 
 body {
-    background-color: #0d1013;
+    background-color: #23272b;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -85,3 +85,32 @@ html {
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
+
+
+/* Scrollbar transparan full */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* pastikan transparan */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+
+

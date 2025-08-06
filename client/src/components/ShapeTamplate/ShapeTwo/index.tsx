@@ -8,7 +8,7 @@ type Props = {
 }
 const ShapeTwo: FC<Props> = ({ color, children }) => {
     return (
-        <div className='h-full w-full bg-black rounded-2xl relative flex flex-col justify-center items-center overflow-hidden z-10'>
+        <div className='h-full w-full bg-black rounded-2xl relative flex flex-col justify-center items-center overflow-hidden z-10 group'>
             {/* shape */}
             {/* bottom left */}
             <ShapeRound color={color} size={4.5} position={[0, '', 3, '']} opacity={0.3} />
@@ -18,7 +18,7 @@ const ShapeTwo: FC<Props> = ({ color, children }) => {
             <ShapeRound color={color} size={2} position={['', 1, '', 0]} opacity={1} />
 
             {/* front */}
-            <div className='w-full h-full flex flex-col justify-center items-center backdrop-blur-xl'>
+            <div className='w-full h-full flex flex-col justify-center items-center backdrop-blur-xl '>
                 <>
                     {children !== undefined ? (
                         children

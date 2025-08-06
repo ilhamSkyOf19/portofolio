@@ -39,7 +39,7 @@ const CardSkillSet: FC<Props> = ({ data, title, skillSet }) => {
 
 
     return (
-        <div className='w-full flex flex-col justify-start items-center'>
+        <div className=' w-full flex flex-col justify-start items-center'>
             {/* card skill set */}
             <div className='w-full h-auto py-10 px-4 bg-tertiary-light relative gap-6 flex flex-col justify-start items-start'>
                 {/* shadow */}

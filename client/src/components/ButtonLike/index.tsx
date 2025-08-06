@@ -5,7 +5,7 @@ import { BiLike } from 'react-icons/bi'
 // button like 
 const ButtonLike: FC = () => {
     return (
-        <button type='button' className='flex flex-row justify-center items-center h-14 w-50 bg-tertiary-light rounded-md relative gap-3'>
+        <button type='button' className='flex flex-row justify-center items-center h-14 w-50 bg-tertiary-light rounded-md relative gap-3 transition-all duration-300 ease-in-out md:hover:-translate-y-1.5 md:hover:bg-tertiary-dark cursor-pointer'>
             {/* shadow */}
             <ShadowBox rounded='md' />
             {/* text */}

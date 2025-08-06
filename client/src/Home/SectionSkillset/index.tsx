@@ -2,6 +2,7 @@ import { useEffect, useState, type FC } from 'react'
 import TitleSection from '../../components/TitleSection'
 import type { TypeDataSkillSet } from '../../types/types'
 import CardSkillSet from '../../components/CardSkillSet'
+import TextNormal from '../../components/TextNormal'
 
 const SectionSkillSet: FC = () => {
     // state
@@ -56,18 +57,21 @@ const SectionSkillSet: FC = () => {
 
 
     return (
-        <section id='skillset' className='w-full min-h-[100vh] bg-tertiary-light flex flex-col justify-start items-center py-12'>
+        <section id='skillset' className='w-full h-auto bg-tertiary-light flex flex-col justify-start items-center py-12'>
             {/* title */}
             <TitleSection subJudul='skill set' title='my skill set' />
 
             {/* content skill set */}
-            <div className='w-full flex flex-col justify-start items-center gap-16 px-2'>
+            <div className='grid grid-cols-1 gap-16 px-2 md:grid-cols-2 md:gap-10 lg:grid-cols-3 mb-18'>
                 <CardSkillSet skillSet='one' title='Design' data={design} />
-                <CardSkillSet skillSet='two' title='Programming' data={languageProgramming} />
-                <CardSkillSet skillSet='three' title='Framework' data={framework} />
                 <CardSkillSet skillSet='four' title='Database & ORM' data={database} />
+                <CardSkillSet skillSet='two' title='Programming' data={languageProgramming} />
                 <CardSkillSet skillSet='five' title='Tools & Package Manager' data={tools} />
+                <CardSkillSet skillSet='three' title='Framework' data={framework} />
             </div>
+            <TextNormal classname='text-center px-4'>
+                I consistently aim to employ the right techniques and methods to attain the optimal results.
+            </TextNormal>
         </section>
     )
 }

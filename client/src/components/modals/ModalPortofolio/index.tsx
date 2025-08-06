@@ -61,7 +61,7 @@ const ModalPortofolio: FC<Props> = ({ id, refComponent, active, setActive }) => 
             'fixed w-full h-screen top-0 left-0 bg-tertiary-light z-50 flex-col justify-start items-start px-4 pt-20 pb-12 overflow-y-scroll',
         )}>
             <div className='w-full flex flex-col justify-start items-center animate-fade-in'>
-                <div ref={refComponent as RefObject<HTMLDivElement>} className='bg-tertiary-dark w-full min-h-[100vh] rounded-2xl pt-4 pb-12 px-4.5 relative shadow-2xl shadow-[rgba(255,_255,_255,_0.05)]'>
+                <div ref={refComponent as RefObject<HTMLDivElement>} className='bg-tertiary-dark w-full min-h-[100vh] rounded-2xl pt-4 pb-12 px-4.5 relative shadow-2xl shadow-[rgba(255,_255,_255,_0.05)] md:px-14'>
 
                     {/* button close */}
                     <div className='w-full h-10 flex flex-row justify-end items-start mb-4'>
@@ -69,65 +69,67 @@ const ModalPortofolio: FC<Props> = ({ id, refComponent, active, setActive }) => 
                     </div>
 
                     {/* img */}
-                    <div className='bg-black w-full h-[15rem] rounded-2xl relative'>
-                        {id === '1' ? (
-                            <ShapeOne color={color}>
-                                <SwiperPortofolio mockup={1} />
-                            </ShapeOne>
-                        ) : id === '2' ? (
-                            <ShapeTwo color={color}>
-                                <SwiperPortofolio mockup={2} />
-                            </ShapeTwo>
-                        ) : null}
-                    </div>
-
-                    {/* desc */}
-                    <div className='w-full flex flex-col justify-start items-start pt-8 relative line-black pb-14'>
-                        {/* title */}
-                        <h2 className='text-2xl text-text-primary font-bold capitalize'>
-                            {data}
-                        </h2>
-                        {/* description */}
-                        <p className='text-lg text-text-primary opacity-80 mt-5 mb-6'>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit odio, esse distinctio debitis placeat nulla fugiat voluptatum saepe officia, sapiente quisquam soluta expedita laborum vel? Quis cumque quo neque fuga!
-                        </p>
-                        <div className='flex flex-col justify-start items-start gap-6'>
-                            {/* spesifikasi design */}
-                            <ElementSpresifikasi element='design'>
-                                <BoxElementPortofolio label='figma' />
-                                <BoxElementPortofolio label='canva' />
-                            </ElementSpresifikasi>
-
-                            {/* spesifikasi code editor */}
-                            <ElementSpresifikasi element='code editor'>
-                                <BoxElementPortofolio label='VS code' />
-                            </ElementSpresifikasi>
-
-                            {/* spesifikasi tools */}
-                            <ElementSpresifikasi element='tools'>
-                                <BoxElementPortofolio label='git' />
-                                <BoxElementPortofolio label='github' />
-                            </ElementSpresifikasi>
-
-                            {/* spesifikasi framework */}
-                            <ElementSpresifikasi element='framework'>
-                                <BoxElementPortofolio label='react ts' />
-                                <BoxElementPortofolio label='tailwind' />
-                                <BoxElementPortofolio label='next js' />
-                            </ElementSpresifikasi>
+                    <div className='w-full grid grid-cols-1 lg:grid-cols-2 lg:gap-6 line-black'>
+                        <div className='bg-black w-full h-[15rem] rounded-2xl relative md:h-[30rem] lg:h-[25rem] '>
+                            {id === '1' ? (
+                                <ShapeOne color={color}>
+                                    <SwiperPortofolio mockup={1} />
+                                </ShapeOne>
+                            ) : id === '2' ? (
+                                <ShapeTwo color={color}>
+                                    <SwiperPortofolio mockup={2} />
+                                </ShapeTwo>
+                            ) : null}
                         </div>
 
-                        {/* button feedback */}
-                        <div className='w-full flex flex-col justify-start items-start gap-7 mt-12'>
-                            {/* button like  */}
-                            <ButtonLike />
-                            {/* Button View Project */}
-                            <ButtonViewProject link='https://github.com/ilhamSkyOf19/mern-mart' />
+                        {/* desc */}
+                        <div className='w-full flex flex-col justify-start items-start pt-8 relative pb-14 lg:pt-0 lg:pl-12'>
+                            {/* title */}
+                            <h2 className='text-2xl text-text-primary font-bold capitalize'>
+                                {data}
+                            </h2>
+                            {/* description */}
+                            <p className='text-lg text-text-primary opacity-80 mt-5 mb-6'>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit odio, esse distinctio debitis placeat nulla fugiat voluptatum saepe officia, sapiente quisquam soluta expedita laborum vel? Quis cumque quo neque fuga!
+                            </p>
+                            <div className='grid gird-cols-1 md:grid-cols-2 gap-6 '>
+                                {/* spesifikasi design */}
+                                <ElementSpresifikasi element='design'>
+                                    <BoxElementPortofolio label='figma' />
+                                    <BoxElementPortofolio label='canva' />
+                                </ElementSpresifikasi>
+
+                                {/* spesifikasi code editor */}
+                                <ElementSpresifikasi element='code editor'>
+                                    <BoxElementPortofolio label='VS code' />
+                                </ElementSpresifikasi>
+
+                                {/* spesifikasi tools */}
+                                <ElementSpresifikasi element='tools'>
+                                    <BoxElementPortofolio label='git' />
+                                    <BoxElementPortofolio label='github' />
+                                </ElementSpresifikasi>
+
+                                {/* spesifikasi framework */}
+                                <ElementSpresifikasi element='framework'>
+                                    <BoxElementPortofolio label='react ts' />
+                                    <BoxElementPortofolio label='tailwind' />
+                                    <BoxElementPortofolio label='next js' />
+                                </ElementSpresifikasi>
+                            </div>
+
+                            {/* button feedback */}
+                            <div className='w-full flex flex-col justify-start items-start gap-7 mt-12 md:flex-row'>
+                                {/* button like  */}
+                                <ButtonLike />
+                                {/* Button View Project */}
+                                <ButtonViewProject link='https://github.com/ilhamSkyOf19/mern-mart' />
+                            </div>
                         </div>
                     </div>
 
                     {/* desc detail */}
-                    <div className='w-full min-h-[100vh] flex flex-col justify-start items-start pt-10'>
+                    <div className='w-full h-auto flex flex-col justify-start items-start pt-10'>
                         {/* highlight */}
                         <TextNormal size='text-lg'>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nisi possimus numquam reiciendis perferendis itaque labore, inventore sint quasi voluptatum.

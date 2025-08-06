@@ -8,7 +8,7 @@ type ButtonViewProjectProps = {
 // button view project
 const ButtonViewProject: FC<ButtonViewProjectProps> = ({ link }) => {
     return (
-        <a href={link} target='_blank' className='flex flex-row justify-center items-center h-14 w-50 bg-tertiary-light rounded-md relative gap-6'>
+        <a href={link} target='_blank' className='flex flex-row justify-center items-center h-14 w-50 bg-tertiary-light rounded-md relative gap-6 transition-all duration-300 ease-in-out md:hover:-translate-y-1.5 md:hover:bg-tertiary-dark cursor-pointer'>
             {/* shadow */}
             <ShadowBox rounded='md' />
             {/* text */}

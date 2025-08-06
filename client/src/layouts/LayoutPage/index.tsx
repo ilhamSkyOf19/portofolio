@@ -12,11 +12,13 @@ type Props = {
 const LayoutPage: FC<Props> = ({ children }) => {
     // state 
     const [sideBar, SetSideBar] = useState<boolean>(false);
+    const [showNavbar, setShowNavbar] = useState<boolean>(true);
 
 
     // ref 
     const dropDownRef = useRef<HTMLDivElement>(null);
     const barRef = useRef<HTMLButtonElement>(null);
+    const lastScrollY = useRef(0); // pakai ref agar tidak memicu re-render
     // handle active side bar
 
     // click out side 
@@ -34,6 +36,27 @@ const LayoutPage: FC<Props> = ({ children }) => {
         };
     }, [dropDownRef, barRef])
 
+    // handle scroll hidden & show navbar
+    useEffect(() => {
+        const handleScroll = () => {
+            requestAnimationFrame(() => {
+                // set current scroll
+                const currentScrollY = window.scrollY;
+                // cek scroll down
+                if (currentScrollY > lastScrollY.current) {
+                    setShowNavbar(false);
+                } else {
+                    setShowNavbar(true);
+                }
+                lastScrollY.current = currentScrollY;
+            });
+        };
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
 
 
 
@@ -44,11 +67,13 @@ const LayoutPage: FC<Props> = ({ children }) => {
 
     return (
         <div className='w-full flex flex-col justify-start items-center min-h-screen relative'>
-            <Navbar setSideBar={SetSideBar} barRef={barRef} />
-            {device === "mobile" && (
+            <Navbar setSideBar={SetSideBar} barRef={barRef} showNavbar={showNavbar} />
+            {(device === "mobile" || device === "tablet") && (
                 <SideNavbar propsRef={dropDownRef} active={sideBar} setSideBar={SetSideBar} />
             )}
-            {children}
+            <div className='w-full flex flex-col justify-start items-center bg-tertiary-light md:px-10'>
+                {children}
+            </div>
         </div>
     )
 }

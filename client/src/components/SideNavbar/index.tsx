@@ -59,7 +59,10 @@ const SideNavbar: FC<Props> = ({ propsRef, active, setSideBar }) => {
         )}>
             <div ref={propsRef} className={clsx(
                 'w-[80%] h-full bg-tertiary-dark delay-100 transition-transform duration-500 ease-in-out px-3 flex flex-col justify-start items-start py-5 overflow-y-scroll',
-                active ? "translate-x-0" : "-translate-x-full"
+                // tablet 
+                'md:w-[50%]',
+                active ? "translate-x-0" : "-translate-x-full",
+
             )}>
                 {/* logo and close */}
                 <div className='w-full flex flex-col justify-start items-start gap-5 pb-6 relative line'>
