@@ -13,7 +13,6 @@ import { IoCloseOutline } from "react-icons/io5";
 
 import { FaGithub, FaInstagram } from 'react-icons/fa';
 import type { IconType } from 'react-icons';
-import { FiFacebook } from 'react-icons/fi';
 
 
 // type props
@@ -98,10 +97,8 @@ const SideNavbar: FC<Props> = ({ propsRef, active, setSideBar }) => {
                     <SubJudulTextMedium text='find with me' />
                     {/* social media */}
                     <div className='w-full flex flex-row justify-start items-start gap-5'>
-                        {/* card facebook */}
-                        <CardSocialMedia icon={FiFacebook} link='https://www.facebook.com' />
                         {/* card instagram */}
-                        <CardSocialMedia icon={FaInstagram} link='https://www.instagram.com' />
+                        <CardSocialMedia icon={FaInstagram} link='https://www.instagram.com/iiaammr_?igsh=MTdtdzF3MmNpZndsdQ==' />
                         {/* card github */}
                         <CardSocialMedia icon={FaGithub} link='https://github.com/ilhamSkyOf19' />
                     </div>

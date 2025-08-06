@@ -72,6 +72,37 @@
     content: "";
     @apply absolute w-full h-[2px] bg-black rounded-full opacity-30 top-0;
   }
+
+  /* transition */
+  .transition-500 {
+    @apply transition-all duration-500 ease-in-out;
+  }
+  .transition-700 {
+    @apply transition-all duration-700 ease-in-out;
+  }
+  .transition-1 {
+    @apply transition-all duration-1000 ease-in-out;
+  }
+
+  .back-y {
+    @apply translate-y-0 opacity-100;
+  }
+
+
+  .back-x {
+    @apply translate-x-0 opacity-100
+  }
+
+  .start-to-top {
+    @apply translate-y-16 opacity-0;
+  }
+  .start-to-bottom {
+    @apply -translate-y-16 opacity-0;
+  }
+
+  .start-to-left {
+    @apply -translate-x-16 opacity-0;
+  }
 }
 
 

@@ -1,4 +1,4 @@
-import { type FC } from 'react'
+import { memo, type FC } from 'react'
 import TitleSection from '../../components/TitleSection'
 import BoxIconSvg from '../../components/BoxIconSvg';
 
@@ -79,4 +79,4 @@ const ContainerTech: FC<ContainerTechProps> = ({ title, icon }) => {
     )
 }
 
-export default SectionMyTech
+export default memo(SectionMyTech);

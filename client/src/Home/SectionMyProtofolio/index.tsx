@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type FC, type RefObject } from 'react'
+import { memo, useEffect, useRef, useState, type FC, type RefObject } from 'react'
 import TitleSection from '../../components/TitleSection'
 import CardPortofolio from '../../components/CardPortofolio'
 import ShapeOne from '../../components/ShapeTamplate/ShapeOne'
@@ -85,4 +85,4 @@ const SectionMyProtofolio: FC = () => {
     )
 }
 
-export default SectionMyProtofolio
+export default memo(SectionMyProtofolio)

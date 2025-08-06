@@ -1,4 +1,4 @@
-import { useEffect, useRef, type FC, type RefObject } from 'react'
+import { memo, useEffect, useRef, type FC, type RefObject } from 'react'
 import ShadowBox from '../../components/ShadowBox'
 
 
@@ -83,4 +83,4 @@ const SectionAbout: FC = () => {
     )
 }
 
-export default SectionAbout
+export default memo(SectionAbout)

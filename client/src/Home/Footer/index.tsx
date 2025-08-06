@@ -1,4 +1,4 @@
-import { type FC } from 'react'
+import { memo, type FC } from 'react'
 import TitleSection from '../../components/TitleSection'
 
 const Footer: FC = () => {
@@ -31,4 +31,4 @@ const Footer: FC = () => {
     )
 }
 
-export default Footer
+export default memo(Footer)

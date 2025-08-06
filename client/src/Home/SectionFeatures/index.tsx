@@ -6,13 +6,21 @@ import CardWhatIDo from '../../components/CardWhatIDo';
 import { CiGlobe, CiMobile3 } from "react-icons/ci";
 import { FaCode } from 'react-icons/fa6';
 import TitleSection from '../../components/TitleSection';
+import { useView } from '../../hook/useView';
+import ParallaxToBottom from '../../components/ParallaxToBottom';
 
 
 const Features: FC = () => {
+
+
+    // parallax 
+    const title = useView();
     return (
         <section id='features' className='bg-tertiary-light w-full min-h-[100vh] mt-0.5 flex flex-col justify-start items-items py-18'>
             {/* title */}
-            <TitleSection subJudul='features' title='what i do' />
+            <ParallaxToBottom ref={title.ref} inView={title.inView}>
+                <TitleSection subJudul='features' title='what i do' />
+            </ParallaxToBottom>
 
             {/* content card */}
             <ContentCard />

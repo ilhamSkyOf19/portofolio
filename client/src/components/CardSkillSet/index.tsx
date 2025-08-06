@@ -48,7 +48,7 @@ const CardSkillSet: FC<Props> = ({ data, title, skillSet }) => {
                 {/* content title card */}
                 <div ref={ref} className='w-full flex flex-col justify-start items-start gap-3'>
                     {/* sub title */}
-                    <SubJudulPrimaryMedium text={`skill set ${skillSet}`} style='capitalize' />
+                    <SubJudulPrimaryMedium text={`skills set ${skillSet}`} style='capitalize' />
                     {/* title */}
                     <h3 className='uppercase text-2xl font-semibold text-text-primary'>
                         {title}
