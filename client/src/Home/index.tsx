@@ -5,7 +5,7 @@ import Features from './SectionFeatures'
 import SectionMyProtofolio from './SectionMyProtofolio'
 import SectionAbout from './SectionAbout'
 import SectionMyTech from './SectionMyTech'
-import SectionSkillSet from './SectionSkillSet'
+import SectionSkillSetPersentase from './SectionSkillSetPersentase'
 import Footer from './Footer'
 
 const Home: FC = () => {
@@ -16,7 +16,7 @@ const Home: FC = () => {
             <SectionMyProtofolio />
             <SectionAbout />
             <SectionMyTech />
-            <SectionSkillSet />
+            <SectionSkillSetPersentase />
             <Footer />
         </LayoutPage>
     )

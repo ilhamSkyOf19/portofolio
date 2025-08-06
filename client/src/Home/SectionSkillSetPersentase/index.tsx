@@ -4,7 +4,7 @@ import type { TypeDataSkillSet } from '../../types/types'
 import CardSkillSet from '../../components/CardSkillSet'
 import TextNormal from '../../components/TextNormal'
 
-const SectionSkillSet: FC = () => {
+const SectionSkillSetPersentase: FC = () => {
     // state
     const [design, setDesign] = useState<TypeDataSkillSet[]>([]);
     const [languageProgramming, setLanguageProgramming] = useState<TypeDataSkillSet[]>([]);
@@ -76,4 +76,4 @@ const SectionSkillSet: FC = () => {
     )
 }
 
-export default SectionSkillSet
+export default SectionSkillSetPersentase
