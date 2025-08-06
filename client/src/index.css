@@ -61,6 +61,17 @@
     content: "";
     @apply absolute w-full h-[2px] bg-black rounded-full opacity-30 bottom-0;
   }
+  
+
+
+  .line-black-before {
+    @apply relative; /* supaya after bisa absolute */
+  }
+
+  .line-black-before::after {
+    content: "";
+    @apply absolute w-full h-[2px] bg-black rounded-full opacity-30 top-0;
+  }
 }
 
 

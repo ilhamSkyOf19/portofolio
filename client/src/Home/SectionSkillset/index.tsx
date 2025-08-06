@@ -3,7 +3,7 @@ import TitleSection from '../../components/TitleSection'
 import type { TypeDataSkillSet } from '../../types/types'
 import CardSkillSet from '../../components/CardSkillSet'
 
-const SectionSkillset: FC = () => {
+const SectionSkillSet: FC = () => {
     // state
     const [design, setDesign] = useState<TypeDataSkillSet[]>([]);
     const [languageProgramming, setLanguageProgramming] = useState<TypeDataSkillSet[]>([]);
@@ -56,7 +56,7 @@ const SectionSkillset: FC = () => {
 
 
     return (
-        <section id='skillset' className='w-full min-h-[100vh] bg-tertiary-light flex flex-col justify-start items-center pt-12'>
+        <section id='skillset' className='w-full min-h-[100vh] bg-tertiary-light flex flex-col justify-start items-center py-12'>
             {/* title */}
             <TitleSection subJudul='skill set' title='my skill set' />
 
@@ -72,4 +72,4 @@ const SectionSkillset: FC = () => {
     )
 }
 
-export default SectionSkillset
+export default SectionSkillSet

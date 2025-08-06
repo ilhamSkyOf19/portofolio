@@ -1,4 +1,4 @@
-import { memo, type FC, type RefObject } from 'react'
+import { memo, type FC } from 'react'
 import LazyImage from '../../components/LazyImage';
 import { Typewriter } from 'react-simple-typewriter';
 
@@ -6,11 +6,8 @@ import { Typewriter } from 'react-simple-typewriter';
 import personHd from '../../assets/img/person/person-hd.png';
 import SubjudulMedium from '../../components/SubJudulMedium';
 // icons
-import { FiFacebook } from "react-icons/fi";
-import BoxHrefIcon from '../../components/BoxHrefIcon';
-import { useButtonHref } from '../../hook/useButtonHref';
-import { FaGithub, FaInstagram } from 'react-icons/fa';
 import TextNormal from '../../components/TextNormal';
+import SocialMedia from '../../components/SocialMedia';
 
 const SectionThumbnail: FC = () => {
     // state 
@@ -89,24 +86,6 @@ const Describe: FC = () => {
 }
 
 
-// component social media 
-const SocialMedia: FC = () => {
-    const [buttonfacebook, buttonInstagram, buttonGithub] = [
-        useButtonHref('a'),
-        useButtonHref('a'),
-        useButtonHref('a')];
-
-    return (
-        <div className='w-full flex flex-row justify-start items-center gap-6'>
-            {/* facebook */}
-            <BoxHrefIcon buttonRef={buttonfacebook.buttonRef as RefObject<HTMLAnchorElement>} mouseDown={buttonfacebook.mouseDown} link='https://www.facebook.com/IlhamRizky' icon={FiFacebook} />
-            {/* instagram */}
-            <BoxHrefIcon buttonRef={buttonInstagram.buttonRef as RefObject<HTMLAnchorElement>} mouseDown={buttonInstagram.mouseDown} link='https://www.facebook.com/IlhamRizky' icon={FaInstagram} />
-            {/* github */}
-            <BoxHrefIcon buttonRef={buttonGithub.buttonRef as RefObject<HTMLAnchorElement>} mouseDown={buttonGithub.mouseDown} link='https://github.com/ilhamSkyOf19' icon={FaGithub} />
-        </div>
-    )
-}
 
 
 export default memo(SectionThumbnail);
