@@ -1,0 +1,75 @@
+import { useEffect, useState, type FC } from 'react'
+import TitleSection from '../../components/TitleSection'
+import type { TypeDataSkillSet } from '../../types/types'
+import CardSkillSet from '../../components/CardSkillSet'
+
+const SectionSkillset: FC = () => {
+    // state
+    const [design, setDesign] = useState<TypeDataSkillSet[]>([]);
+    const [languageProgramming, setLanguageProgramming] = useState<TypeDataSkillSet[]>([]);
+    const [framework, setFramework] = useState<TypeDataSkillSet[]>([]);
+    const [database, setDatabase] = useState<TypeDataSkillSet[]>([]);
+    const [tools, setTools] = useState<TypeDataSkillSet[]>([]);
+
+    useEffect(() => {
+        // 🎨 Design Tools
+        setDesign([
+            { skill: "Canva", persentase: 75 },
+            { skill: "Figma", persentase: 60 },
+        ]);
+
+        // 💻 Programming Languages
+        setLanguageProgramming([
+            { skill: "HTML", persentase: 90 },
+            { skill: "CSS", persentase: 90 },
+            { skill: "JavaScript", persentase: 90 },
+            { skill: "TypeScript", persentase: 90 },
+            { skill: "PHP", persentase: 70 },
+        ]);
+
+        // ⚡ Framework & Library (termasuk UI & CSS framework)
+        setFramework([
+            { skill: "React", persentase: 85 },
+            { skill: "Next.js", persentase: 60 },
+            { skill: "Express.js", persentase: 80 },
+            { skill: "Expo", persentase: 80 },
+            { skill: "TailwindCSS", persentase: 90 },
+            { skill: "Vite", persentase: 80 },
+        ]);
+
+        // 🗄️ Database & ORM
+        setDatabase([
+            { skill: "MongoDB", persentase: 75 },
+            { skill: "MySQL", persentase: 90 },
+            { skill: "Prisma", persentase: 85 }, // ORM
+        ]);
+
+        // 🛠 Tools & Package Manager
+        setTools([
+            { skill: "Git", persentase: 90 },
+            { skill: "GitHub", persentase: 80 },
+            { skill: "Vercel", persentase: 80 },
+            { skill: "ChatGPT", persentase: 85 }, // AI assistant
+        ]);
+    }, []);
+
+
+
+    return (
+        <section id='skillset' className='w-full min-h-[100vh] bg-tertiary-light flex flex-col justify-start items-center pt-12'>
+            {/* title */}
+            <TitleSection subJudul='skill set' title='my skill set' />
+
+            {/* content skill set */}
+            <div className='w-full flex flex-col justify-start items-center gap-16 px-2'>
+                <CardSkillSet skillSet='one' title='Design' data={design} />
+                <CardSkillSet skillSet='two' title='Programming' data={languageProgramming} />
+                <CardSkillSet skillSet='three' title='Framework' data={framework} />
+                <CardSkillSet skillSet='four' title='Database & ORM' data={database} />
+                <CardSkillSet skillSet='five' title='Tools & Package Manager' data={tools} />
+            </div>
+        </section>
+    )
+}
+
+export default SectionSkillset

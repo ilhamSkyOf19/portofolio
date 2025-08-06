@@ -5,8 +5,8 @@ import ShadowBox from '../../components/ShadowBox'
 // img
 import person from '../../assets/img/person/person-hd.png'
 import LazyImage from '../../components/LazyImage'
-import JudulSection from '../../components/JudulSection'
 import TextNormal from '../../components/TextNormal'
+import TitleSection from '../../components/TitleSection'
 
 const SectionAbout: FC = () => {
 
@@ -33,10 +33,7 @@ const SectionAbout: FC = () => {
     return (
         <section id='about' className='w-full min-h-[100vh] bg-tertiary-light py-16 px-3'>
             {/* title section */}
-            <div className='w-full flex flex-row justify-center items-center mb-12'>
-                {/* title */}
-                <JudulSection text='about me' />
-            </div>
+            <TitleSection subJudul='A little more about me' title='about me' />
             {/* img */}
             <div className='w-full h-[65vh] rounded-xl bg-tertiary-light relative p-3'>
                 {/* shadow */}

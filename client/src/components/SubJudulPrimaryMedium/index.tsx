@@ -1,13 +1,18 @@
+import clsx from 'clsx';
 import { type FC } from 'react'
 
 
 // type props 
 type Props = {
     text: string;
+    style?: string;
 }
-const SubJudulPrimaryMedium: FC<Props> = ({ text }) => {
+const SubJudulPrimaryMedium: FC<Props> = ({ text, style }) => {
     return (
-        <h2 className='text-center font-normal text-md text-primary uppercase tracking-[0.05rem]'>{text}</h2>
+        <h2 className={clsx(
+            'font-normal text-md text-primary tracking-[0.1rem]',
+            style ? style : 'uppercase'
+        )}>{text}</h2>
     )
 }
 

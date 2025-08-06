@@ -9,7 +9,7 @@ type Props = {
 }
 const TitleSection: FC<Props> = ({ subJudul, title }) => {
     return (
-        <div className='w-full flex flex-col justify-start items-center gap-4'>
+        <div className='w-full text-center flex flex-col justify-start items-center gap-4 mb-14'>
             <SubJudulPrimaryMedium text={subJudul} />
             <JudulSection text={title} />
         </div>

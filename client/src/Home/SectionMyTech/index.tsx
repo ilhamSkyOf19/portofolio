@@ -35,11 +35,11 @@ import windsurf from '../../assets/svg/windsurf.svg';
 
 
 
-const SectionSkills: FC = () => {
+const SectionMyTech: FC = () => {
 
 
     return (
-        <section id='skills' className='w-full min-h-[100vh] bg-tertiary-light px-3 py-16'>
+        <section id='mytech' className='w-full min-h-[100vh] bg-tertiary-light px-3 py-16'>
             {/* title */}
             <TitleSection subJudul='skills' title='my tech stack' />
 
@@ -59,12 +59,12 @@ type ContainerTechProps = {
 // container tech 
 const ContainerTech: FC<ContainerTechProps> = ({ title, icon }) => {
     return (
-        <div className='w-full flex flex-col justify-center items-center mt-18'>
+        <div className='w-full flex flex-col justify-center items-center '>
             {/* title tech */}
             <SubjudulMedium text={title} />
 
             {/* tech */}
-            <div className='w-[80%] pt-8 flex flex-row justify-center items-center flex-wrap gap-8'>
+            <div className='w-[80%] pt-8 flex flex-row justify-center items-center flex-wrap gap-8 mb-14'>
                 {
                     icon.map((item, index) => (
                         <BoxIconSvg key={index}>
@@ -79,4 +79,4 @@ const ContainerTech: FC<ContainerTechProps> = ({ title, icon }) => {
     )
 }
 
-export default SectionSkills
+export default SectionMyTech

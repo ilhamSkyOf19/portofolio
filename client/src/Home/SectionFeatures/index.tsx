@@ -24,7 +24,7 @@ const Features: FC = () => {
 const ContentCard: FC = () => {
     const [webDevlopment, mobileDevlopment, fullStack] = [useButtonHref('div'), useButtonHref('div'), useButtonHref('div')];
     return (
-        <div className='w-full flex flex-col justify-start items-center px-2.5 gap-12 pt-12'>
+        <div className='w-full flex flex-col justify-start items-center px-2.5 gap-12 '>
             {/* web devlopment */}
             <CardWhatIDo title='Web Devlopment' icon={CiGlobe} desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos amet consectetur adipisicing elit.' ref={webDevlopment.buttonRef as React.RefObject<HTMLDivElement>} click={webDevlopment.mouseDown} />
 
