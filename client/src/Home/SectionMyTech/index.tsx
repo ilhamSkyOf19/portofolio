@@ -30,7 +30,7 @@ import git from '../../assets/svg/git.svg';
 import github from '../../assets/svg/github.svg';
 import chatgpt from '../../assets/svg/chatgpt.svg';
 import windsurf from '../../assets/svg/windsurf.svg';
-import SubJudulMedium from '../../components/SubJudulMedium';
+import SubJudulTextMedium from '../../components/SubJudulTextMedium';
 
 
 
@@ -61,7 +61,7 @@ const ContainerTech: FC<ContainerTechProps> = ({ title, icon }) => {
     return (
         <div className='w-full flex flex-col justify-center items-center md:py-5'>
             {/* title tech */}
-            <SubJudulMedium text={title} />
+            <SubJudulTextMedium text={title} />
 
             {/* tech */}
             <div className='w-[80%] pt-8 flex flex-row justify-center items-center flex-wrap gap-8 mb-14 md:w-[90%]'>
