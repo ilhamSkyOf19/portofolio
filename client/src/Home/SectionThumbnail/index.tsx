@@ -4,7 +4,7 @@ import { Typewriter } from 'react-simple-typewriter';
 
 // img
 import personHd from '../../assets/img/person/person-hd.png';
-import SubjudulMedium from '../../components/SubJudulMedium';
+import SubJudulMedium from '../../components/SubJudulMedium';
 // icons
 import TextNormal from '../../components/TextNormal';
 import SocialMedia from '../../components/SocialMedia';
@@ -23,7 +23,7 @@ const SectionThumbnail: FC = () => {
                 {/* social media */}
                 <div className='w-full flex flex-col justify-start items-start gap-6 px-2 mt-12 md:mt-4'>
                     {/* subjudul social media  */}
-                    <SubjudulMedium text='find with me' />
+                    <SubJudulMedium text='find with me' />
                     {/* social media */}
                     <SocialMedia />
                 </div>
@@ -57,7 +57,7 @@ const Describe: FC = () => {
     return (
         <div className='h-[20rem] w-full flex flex-col justify-start items-start pt-8 px-2 md:pt-12'>
             {/* subjudul 1 */}
-            <SubjudulMedium text='welcome to my world' />
+            <SubJudulMedium text='welcome to my world' />
 
             {/*  big title */}
             <div className='flex flex-col justify-start items-start gap-2 mt-6'>

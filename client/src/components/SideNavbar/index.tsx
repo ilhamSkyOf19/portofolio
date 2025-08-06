@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import { useEffect, type FC } from 'react'
 import TextNormal from '../TextNormal';
 import Menu from '../Menu';
-import SubjudulMedium from '../SubJudulMedium';
+import SubJudulMedium from '../SubJudulMedium';
 
 // img
 import Logo from '../Logo';
@@ -95,7 +95,7 @@ const SideNavbar: FC<Props> = ({ propsRef, active, setSideBar }) => {
 
                 {/* footer */}
                 <footer className='w-full flex flex-col justify-start items-start py-6 gap-5'>
-                    <SubjudulMedium text='find with me' />
+                    <SubJudulMedium text='find with me' />
                     {/* social media */}
                     <div className='w-full flex flex-row justify-start items-start gap-5'>
                         {/* card facebook */}

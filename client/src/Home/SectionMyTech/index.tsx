@@ -1,6 +1,6 @@
 import { type FC } from 'react'
 import TitleSection from '../../components/TitleSection'
-import SubjudulMedium from '../../components/SubJudulMedium'
+import SubJudulMedium from '../../components/SubJudulMedium'
 import BoxIconSvg from '../../components/BoxIconSvg';
 
 
@@ -61,7 +61,7 @@ const ContainerTech: FC<ContainerTechProps> = ({ title, icon }) => {
     return (
         <div className='w-full flex flex-col justify-center items-center md:py-5'>
             {/* title tech */}
-            <SubjudulMedium text={title} />
+            <SubJudulMedium text={title} />
 
             {/* tech */}
             <div className='w-[80%] pt-8 flex flex-row justify-center items-center flex-wrap gap-8 mb-14 md:w-[90%]'>
