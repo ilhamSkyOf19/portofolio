@@ -1,6 +1,5 @@
 import { type FC } from 'react'
 import TitleSection from '../../components/TitleSection'
-import SubJudulMedium from '../../components/SubJudulMedium'
 import BoxIconSvg from '../../components/BoxIconSvg';
 
 
@@ -31,6 +30,7 @@ import git from '../../assets/svg/git.svg';
 import github from '../../assets/svg/github.svg';
 import chatgpt from '../../assets/svg/chatgpt.svg';
 import windsurf from '../../assets/svg/windsurf.svg';
+import SubJudulMedium from '../../components/SubJudulMedium';
 
 
 
