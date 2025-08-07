@@ -13,10 +13,12 @@ import LazyImage from '../LazyImage';
 // img
 import mockup1 from '../../assets/mockups/mockup-1.png'
 import mockup2 from '../../assets/mockups/mockup-2.png'
+import mockup3 from '../../assets/mockups/mockup-3.png'
+import mockup4 from '../../assets/mockups/mockup-4.png'
 
 
 type Props = {
-    mockup: 1 | 2;
+    mockup: 1 | 2 | 3 | 4;
 }
 const SwiperPortofolio: FC<Props> = ({ mockup }) => {
     // state 
@@ -52,7 +54,7 @@ const SwiperPortofolio: FC<Props> = ({ mockup }) => {
                 className='relative w-full h-full'
             >
                 {
-                    mockup === 1 ? (
+                    mockup === 1 && (
                         [0, 1, 2].map((_, index) => (
                             <SwiperSlide key={index}>
                                 <div className='flex flex-col justify-center items-center w-full h-full'>
@@ -60,7 +62,10 @@ const SwiperPortofolio: FC<Props> = ({ mockup }) => {
                                 </div>
                             </SwiperSlide>
                         ))
-                    ) : (
+                    )
+                }
+                {
+                    mockup === 2 && (
                         [0, 1, 2].map((_, index) => (
                             <SwiperSlide key={index}>
                                 <div className='flex flex-col justify-center items-center w-full h-full'>
@@ -68,7 +73,30 @@ const SwiperPortofolio: FC<Props> = ({ mockup }) => {
                                 </div>
                             </SwiperSlide>
                         ))
-                    )}
+                    )
+                }
+                {
+                    mockup === 3 && (
+                        [0, 1, 2].map((_, index) => (
+                            <SwiperSlide key={index}>
+                                <div className='flex flex-col justify-center items-center w-full h-full'>
+                                    <LazyImage alt='mockup' src={mockup3} className='w-full h-full object-cover' />
+                                </div>
+                            </SwiperSlide>
+                        ))
+                    )
+                }
+                {
+                    mockup === 4 && (
+                        [0, 1, 2].map((_, index) => (
+                            <SwiperSlide key={index}>
+                                <div className='flex flex-col justify-center items-center w-full h-full'>
+                                    <LazyImage alt='mockup' src={mockup4} className='w-full h-full object-cover' />
+                                </div>
+                            </SwiperSlide>
+                        ))
+                    )
+                }
 
 
             </Swiper>

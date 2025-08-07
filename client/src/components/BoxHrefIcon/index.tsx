@@ -1,5 +1,6 @@
 import { type FC, type RefObject } from 'react'
 import type { IconType } from 'react-icons';
+import ShadowBox from '../ShadowBox';
 
 
 
@@ -11,7 +12,9 @@ type Props = {
 }
 const BoxHrefIcon: FC<Props> = ({ buttonRef, mouseDown, link, icon: Icon }) => {
     return (
-        <a href={link ?? ""} target='_blank' ref={buttonRef as RefObject<HTMLAnchorElement>} className={`w-18 h-18 rounded-md flex flex-row justify-center items-center bg-tertiary-light relative before:content-[""] before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-tertiary-light before:shadow-[-20px_-10px_25px_rgba(255,255,255,0.05)] before:rounded-md after:content-[""] after:absolute after:w-full after:h-full after:bottom-0 after:right-0 after:bg-tertiary-light after:shadow-[15px_10px_25px_rgba(0,0,0,0.3)] after:rounded-md transition-transform duration-300 ease-in-out ${mouseDown ? '-translate-y-1.5' : 'translate-y-0'}`}>
+        <a href={link ?? ""} target='_blank' ref={buttonRef as RefObject<HTMLAnchorElement>} className={`w-18 h-18 rounded-md flex flex-row justify-center items-center bg-tertiary-light relative transition-transform duration-300 ease-in-out hover:-translate-y-1.5 ${mouseDown ? '-translate-y-1.5' : 'translate-y-0'}`}>
+            {/* shadow */}
+            <ShadowBox rounded='md' />
             <div className='z-2 w-full h-full rounded-md flex flex-col justify-center items-center'>
                 <Icon className='text-3xl text-white' />
             </div>

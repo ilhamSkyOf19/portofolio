@@ -54,9 +54,9 @@ const ThumbnailImage: FC = () => {
         )}>
             <div className='w-[96%] h-[55%] shadow-[0_-20px_30px_rgba(255,255,255,0.03)] rounded-lg' />
             {/* img */}
-            <div className='w-[96%] h-full absolute bottom-0 flex flex-col justify-start items-center overflow-hidden rounded-lg '>
+            <div className='w-[96%] h-full absolute bottom-0 flex flex-col justify-start items-center overflow-hidden rounded-lg group '>
                 <div className='w-[100%] h-full rounded-lg  flex flex-col justify-end items-center relative'>
-                    <LazyImage src={personHd} alt='logo' className='w-[100%] h-[34rem] object-cover z-2 md:w-[100%] md:h-[60rem] lg:h-[36rem]' />
+                    <LazyImage src={personHd} alt='logo' className='w-[100%] h-[34rem] object-cover z-2 md:w-[100%] md:h-[60rem] lg:h-[36rem] group-hover:scale-105 transition-all duration-300 ease-in-out' />
 
                     {/* shadow bottom */}
                     <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white/20 to-transparent opacity-15 pointer-events-none z-1" />

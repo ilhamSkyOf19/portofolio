@@ -5,7 +5,6 @@ import ShapeOne from '../../components/ShapeTamplate/ShapeOne'
 import ModalPortofolio from '../../components/modals/ModalPortofolio'
 import { useClickOutSide } from '../../hook/useClickOutSide'
 import LazyImage from '../../components/LazyImage'
-import ShapeTwo from '../../components/ShapeTamplate/ShapeTwo'
 
 
 
@@ -13,14 +12,20 @@ import ShapeTwo from '../../components/ShapeTamplate/ShapeTwo'
 // mockup 
 import mockup1 from '../../assets/mockups/mockup-1.png'
 import mockup2 from '../../assets/mockups/mockup-2.png'
-import ParallaxToTop from '../../components/ParallaxToTop'
+import mockup3 from '../../assets/mockups/mockup-3.png'
+import mockup4 from '../../assets/mockups/mockup-4.png'
 
+
+
+import ParallaxToTop from '../../components/ParallaxToTop'
+import type { TypeDataPortofolio } from '../../types/types'
+import dataPortofolio from '../../jsons/portofolioDatas.json'
 
 
 const SectionMyProtofolio: FC = () => {
-
     // state
     const [id, setId] = useState<string>('');
+    const [data, setData] = useState<TypeDataPortofolio[]>([]);
     // ref
     const cardRef = useRef<HTMLDivElement>(null);
     // handle click out side 
@@ -46,6 +51,9 @@ const SectionMyProtofolio: FC = () => {
     }
 
     // active section
+    useEffect(() => {
+        setData(dataPortofolio);
+    }, [])
 
 
     return (
@@ -57,28 +65,22 @@ const SectionMyProtofolio: FC = () => {
 
             {/* container card */}
             <div ref={cardRef} className='w-full grid grid-cols-1 gap-10 px-3 md:grid-cols-2 lg:grid-cols-3 lg:place-content-center'>
-                <CardPortofolio
-                    id='1'
-                    shape={
-                        <ShapeOne color='#87ceeb'>
-                            <LazyImage alt='mockup' src={mockup1} className='w-full h-full object-cover md:group-hover:md:scale-110' />
-                        </ShapeOne>
-                    }
-                    type='development'
-                    title='Develop Fake E-commerce API For Full Online Store'
-                    handleActive={handleActive}
-                />
-                <CardPortofolio
-                    id='2'
-                    shape={
-                        <ShapeTwo color='#fbbf24'>
-                            <LazyImage alt='mockup' src={mockup2} className='w-full h-full object-cover md:group-hover:md:scale-110' />
-                        </ShapeTwo>
-                    }
-                    type='development'
-                    title='Develop App Catatan Celengan Full Rest API'
-                    handleActive={handleActive}
-                />
+                {
+                    data?.map((item, index) => (
+                        <CardPortofolio
+                            key={index}
+                            id={Number(item?.id ?? '').toString()}
+                            shape={
+                                <ShapeOne color={item?.color ?? ''}>
+                                    <LazyImage alt='mockup' src={item?.id === 1 ? mockup1 : item?.id === 2 ? mockup2 : item?.id === 3 ? mockup3 : item?.id === 4 ? mockup4 : mockup4} className='w-full h-full object-cover  md:group-hover:md:scale-105' paddingActive={true} />
+                                </ShapeOne>
+                            }
+                            type={item?.type ?? ''}
+                            title={(item?.title ?? '').slice(0, 50) + '...'}
+                            handleActive={handleActive}
+                        />
+                    ))
+                }
             </div>
             {/* modal */}
             <ModalPortofolio refComponent={ref as RefObject<HTMLDivElement>} active={active} id={id} setActive={setActive} />

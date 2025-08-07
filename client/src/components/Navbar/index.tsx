@@ -79,7 +79,7 @@ const Navbar: FC<Props> = ({ setSideBar, barRef, showNavbar }) => {
             </div>
 
             {/* menu */}
-            <div className='hidden lg:flex flex-row justify-end items-center gap-4'>
+            <div className='hidden lg:flex flex-row justify-end items-center gap-8'>
                 {menu.map((item, index) => (
                     <Menu key={index} setSideBar={setSideBar} label={item.label} id={item.id} active={sectionActive === item.id} />
                 ))}

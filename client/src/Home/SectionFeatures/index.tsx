@@ -33,13 +33,13 @@ const ContentCard: FC = () => {
     return (
         <div className='w-full grid grid-cols-1 px-2.5 gap-12 md:px-0 md:grid-cols-2 md:gap-9 lg:grid-cols-3'>
             {/* web devlopment */}
-            <CardWhatIDo title='Web Devlopment' icon={CiGlobe} desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos amet ' ref={webDevlopment.buttonRef as React.RefObject<HTMLDivElement>} click={webDevlopment.mouseDown} />
+            <CardWhatIDo title='Web Devlopment' icon={CiGlobe} desc='Membangun aplikasi website dengan frontend yang interaktif dan user friendly.' ref={webDevlopment.buttonRef as React.RefObject<HTMLDivElement>} click={webDevlopment.mouseDown} />
 
             {/* App Devlopment */}
-            <CardWhatIDo title='Mobile Devlopment' icon={CiMobile3} desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos amet consectetur ' ref={mobileDevlopment.buttonRef as React.RefObject<HTMLDivElement>} click={mobileDevlopment.mouseDown} />
+            <CardWhatIDo title='Mobile Devlopment' icon={CiMobile3} desc='Membangun aplikasi mobile modern yang cepat, ringan menggunakan React Native dan teknologi terbaru.' ref={mobileDevlopment.buttonRef as React.RefObject<HTMLDivElement>} click={mobileDevlopment.mouseDown} />
 
             {/* full stack */}
-            <CardWhatIDo title='Mobile Devlopment' icon={FaCode} desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos ame' ref={fullStack.buttonRef as React.RefObject<HTMLDivElement>} click={fullStack.mouseDown} />
+            <CardWhatIDo title='Full Stack Devlopment' icon={FaCode} desc='Membangun aplikasi web lengkap dari frontend hingga backend dan API.' ref={fullStack.buttonRef as React.RefObject<HTMLDivElement>} click={fullStack.mouseDown} />
         </div>
     )
 }

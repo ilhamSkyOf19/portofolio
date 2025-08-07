@@ -10,3 +10,19 @@ export type TypePropsParallax = {
 }
 
 export type SectionType = 'home' | 'aboutme' | 'features' | 'mytech' | 'portofolio' | 'skillset' | 'thankyou';
+
+
+
+export type TypeDataPortofolio = {
+    id: number;
+    type: string;
+    title: string;
+    highlight: string;
+    design: string[];
+    codeEditor: string;
+    tools: string[];
+    framework: string[];
+    color: string;
+    database: string[];
+    link: string;
+}

@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { useState, type FC } from 'react'
 import { useInView } from 'react-intersection-observer'
 
@@ -7,9 +8,10 @@ type Props = {
     src: string;
     alt: string;
     className?: string;
+    paddingActive?: boolean
 }
 
-const LazyImage: FC<Props> = ({ src, alt, className }) => {
+const LazyImage: FC<Props> = ({ src, alt, className, paddingActive }) => {
     // ref
     const { ref, inView } = useInView({
         triggerOnce: true,
@@ -19,7 +21,10 @@ const LazyImage: FC<Props> = ({ src, alt, className }) => {
     // loaded
     const [loaded, setLoaded] = useState<boolean>(false);
     return (
-        <div ref={ref} className='overflow-hidden'>
+        <div ref={ref} className={clsx(
+            'overflow-hidden',
+            paddingActive ? 'p-3' : '',
+        )}>
             {
                 inView && (
                     <img
