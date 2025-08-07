@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type FC, type ReactNode } from 'react'
 import Navbar from '../../components/Navbar';
-import { useWindowSize } from '../../hook/useWindowSize';
 import SideNavbar from '../../components/SideNavbar';
+
 
 
 // types props 
@@ -60,17 +60,12 @@ const LayoutPage: FC<Props> = ({ children }) => {
 
 
 
-    // get device
-    const { device } = useWindowSize();
-
 
 
     return (
         <div className='w-full flex flex-col justify-start items-center min-h-screen relative'>
             <Navbar setSideBar={SetSideBar} barRef={barRef} showNavbar={showNavbar} />
-            {(device === "mobile" || device === "tablet") && (
-                <SideNavbar propsRef={dropDownRef} active={sideBar} setSideBar={SetSideBar} />
-            )}
+            <SideNavbar propsRef={dropDownRef} active={sideBar} setSideBar={SetSideBar} />
             <div className='w-full flex flex-col justify-start items-center bg-tertiary-light md:px-10'>
                 {children}
             </div>

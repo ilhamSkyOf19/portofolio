@@ -31,17 +31,21 @@ import github from '../../assets/svg/github.svg';
 import chatgpt from '../../assets/svg/chatgpt.svg';
 import windsurf from '../../assets/svg/windsurf.svg';
 import SubJudulTextMedium from '../../components/SubJudulTextMedium';
+import ParallaxToTop from '../../components/ParallaxToTop';
 
 
 
 
 const SectionMyTech: FC = () => {
+    // active section
 
 
     return (
         <section id='mytech' className='w-full h-auto bg-tertiary-light px-3 py-16'>
             {/* title */}
-            <TitleSection subJudul='skills' title='my tech stack' />
+            <ParallaxToTop>
+                <TitleSection subJudul='skills' title='my tech stack' />
+            </ParallaxToTop>
 
             {/* container tech */}
             <ContainerTech title='tools tech' icon={[canva, figma, vscode, git, github, chatgpt, windsurf]} />
@@ -61,13 +65,15 @@ const ContainerTech: FC<ContainerTechProps> = ({ title, icon }) => {
     return (
         <div className='w-full flex flex-col justify-center items-center md:py-5'>
             {/* title tech */}
-            <SubJudulTextMedium text={title} />
+            <ParallaxToTop>
+                <SubJudulTextMedium text={title} />
+            </ParallaxToTop>
 
             {/* tech */}
             <div className='w-[80%] pt-8 flex flex-row justify-center items-center flex-wrap gap-8 mb-14 md:w-[90%]'>
                 {
                     icon.map((item, index) => (
-                        <BoxIconSvg key={index}>
+                        <BoxIconSvg key={index} delay={(index + 1) * 400}>
                             <div className='w-8 h-10'>
                                 <img src={item} alt='canva' className='w-full h-full object-contain' loading='lazy' />
                             </div>

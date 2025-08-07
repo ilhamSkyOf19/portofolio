@@ -93,6 +93,10 @@
     @apply translate-x-0 opacity-100
   }
 
+  .back-scale {
+    @apply scale-100 opacity-100
+  }
+
   .start-to-top {
     @apply translate-y-16 opacity-0;
   }
@@ -101,7 +105,14 @@
   }
 
   .start-to-left {
+    @apply translate-x-16 opacity-0;
+  }
+  .start-to-right {
     @apply -translate-x-16 opacity-0;
+  }
+
+  .start-scale-small {
+    @apply scale-0 opacity-0
   }
 }
 

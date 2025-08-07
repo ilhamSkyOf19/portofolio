@@ -4,6 +4,7 @@ import SubJudulPrimaryMedium from '../SubJudulPrimaryMedium'
 import BoxPersentase from '../BoxPersentase'
 import type { TypeDataSkillSet } from '../../types/types'
 import { useInView } from 'react-intersection-observer'
+import ParallaxToTop from '../ParallaxToTop'
 
 
 type Props = {
@@ -39,28 +40,30 @@ const CardSkillSet: FC<Props> = ({ data, title, skillSet }) => {
 
 
     return (
-        <div className=' w-full flex flex-col justify-start items-center'>
-            {/* card skill set */}
-            <div className='w-full h-auto py-10 px-4 bg-tertiary-light relative gap-6 flex flex-col justify-start items-start'>
-                {/* shadow */}
-                <ShadowBox rounded='md' />
+        <ParallaxToTop>
+            <div className=' w-full flex flex-col justify-start items-center'>
+                {/* card skill set */}
+                <div className='w-full h-auto py-10 px-4 bg-tertiary-light relative gap-6 flex flex-col justify-start items-start'>
+                    {/* shadow */}
+                    <ShadowBox rounded='md' />
 
-                {/* content title card */}
-                <div ref={ref} className='w-full flex flex-col justify-start items-start gap-3'>
-                    {/* sub title */}
-                    <SubJudulPrimaryMedium text={`skills set ${skillSet}`} style='capitalize' />
-                    {/* title */}
-                    <h3 className='uppercase text-2xl font-semibold text-text-primary'>
-                        {title}
-                    </h3>
+                    {/* content title card */}
+                    <div ref={ref} className='w-full flex flex-col justify-start items-start gap-3'>
+                        {/* sub title */}
+                        <SubJudulPrimaryMedium text={`skills set ${skillSet}`} style='capitalize' />
+                        {/* title */}
+                        <h3 className='uppercase text-2xl font-semibold text-text-primary'>
+                            {title}
+                        </h3>
+                    </div>
+                    {
+                        data.map((item, index) => (
+                            <BoxPersentase key={index} persentase={animated[index]} skill={item.skill} />
+                        ))
+                    }
                 </div>
-                {
-                    data.map((item, index) => (
-                        <BoxPersentase key={index} persentase={animated[index]} skill={item.skill} />
-                    ))
-                }
             </div>
-        </div>
+        </ParallaxToTop>
     )
 }
 

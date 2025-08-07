@@ -13,6 +13,7 @@ import ShapeTwo from '../../components/ShapeTamplate/ShapeTwo'
 // mockup 
 import mockup1 from '../../assets/mockups/mockup-1.png'
 import mockup2 from '../../assets/mockups/mockup-2.png'
+import ParallaxToTop from '../../components/ParallaxToTop'
 
 
 
@@ -44,15 +45,15 @@ const SectionMyProtofolio: FC = () => {
         setId(id);
     }
 
-    useEffect(() => {
-        console.log(id)
-    }, [id])
+    // active section
 
 
     return (
         <section id='portfolio' className='w-full h-auto flex flex-col justify-start items-center bg-tertiary-light py-12 relative'>
             {/* title */}
-            <TitleSection subJudul='visit my portofolio and keep your feedback' title='my portfolio' />
+            <ParallaxToTop >
+                <TitleSection subJudul='visit my portofolio and keep your feedback' title='my portfolio' />
+            </ParallaxToTop>
 
             {/* container card */}
             <div ref={cardRef} className='w-full grid grid-cols-1 gap-10 px-3 md:grid-cols-2 lg:grid-cols-3 lg:place-content-center'>

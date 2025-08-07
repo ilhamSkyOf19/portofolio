@@ -5,7 +5,6 @@ import type { IconType } from "react-icons"
 import clsx from "clsx"
 import { useWindowSize } from "../../hook/useWindowSize"
 import ParallaxToTop from "../ParallaxToTop"
-import { useView } from "../../hook/useView"
 
 // typee props card 
 type Props = {
@@ -21,10 +20,8 @@ const CardWhatIDo: FC<Props> = ({ click, ref, icon: Icon, title, desc }) => {
 
     const { device } = useWindowSize();
 
-    // parallax
-    const view = useView();
     return (
-        <ParallaxToTop ref={view.ref} inView={view.inView} duration="transition-700">
+        <ParallaxToTop>
             <div ref={ref} className='w-full h-[21rem] relative md:h-[21rem]' >
                 {/* shadow */}
                 <ShadowBox rounded='xl' />

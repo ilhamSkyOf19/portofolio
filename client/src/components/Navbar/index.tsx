@@ -1,10 +1,11 @@
 import { useEffect, useState, type FC } from 'react'
-import { useWindowSize } from '../../hook/useWindowSize'
 
 // icons
 import { HiBars3 } from "react-icons/hi2";
 import Logo from '../Logo';
 import clsx from 'clsx';
+import Menu from '../Menu';
+
 
 // type props 
 type Props = {
@@ -14,25 +15,23 @@ type Props = {
 }
 
 // type menu type
-// type MenuType = {
-//     id: string;
-//     label: string
-// }
+type MenuType = {
+    id: string;
+    label: string
+}
 
 const Navbar: FC<Props> = ({ setSideBar, barRef, showNavbar }) => {
     //  get size
-    // const menu: MenuType[] = [
-    //     { id: "home", label: "home" },
-    //     { id: "features", label: "features" },
-    //     { id: "portfolio", label: "portfolio" },
-    //     { id: "about", label: "about" },
-    //     { id: "resume", label: "resume" },
-    //     { id: "mytech", label: "my tech" },
-    //     { id: "skillset", label: "skillset" },
-    //     { id: "thankyou", label: "thank you" },
-    // ]
+    const menu: MenuType[] = [
+        { id: "home", label: "home" },
+        { id: "features", label: "features" },
+        { id: "portfolio", label: "portfolio" },
+        { id: "aboutme", label: "about me" },
+        { id: "mytech", label: "my tech" },
+        { id: "skillset", label: "skillset" },
+        { id: "thankyou", label: "thank you" },
+    ]
     // get device
-    const { device } = useWindowSize();
     const [blur, setBlur] = useState<boolean>(false);
 
     useEffect(() => {
@@ -47,6 +46,10 @@ const Navbar: FC<Props> = ({ setSideBar, barRef, showNavbar }) => {
         window.addEventListener("scroll", handleBlur, { passive: true });
         return () => window.removeEventListener("scroll", handleBlur);
     }, []);
+
+
+    // section active 
+    const sectionActive = window.location.hash.replace('#', '');
 
 
 
@@ -69,15 +72,17 @@ const Navbar: FC<Props> = ({ setSideBar, barRef, showNavbar }) => {
                 </h2>
             </div>
             {/* bars */}
-            <div className='flex-2 flex flex-row justify-end items-center gap-2'>
-                {
-                    (device === "mobile" || device === "tablet") && (
-                        <button ref={barRef} type='button' onClick={() => setSideBar(true)}  >
-                            <HiBars3 className='text-4xl text-primary' />
-                        </button>
-                    )
-                }
+            <div className='flex-1 flex flex-row justify-end items-center gap-2 lg:hidden'>
+                <button ref={barRef} type='button' onClick={() => setSideBar(true)}  >
+                    <HiBars3 className='text-4xl text-primary' />
+                </button>
+            </div>
 
+            {/* menu */}
+            <div className='hidden lg:flex flex-row justify-end items-center gap-4'>
+                {menu.map((item, index) => (
+                    <Menu key={index} setSideBar={setSideBar} label={item.label} id={item.id} active={sectionActive === item.id} />
+                ))}
             </div>
         </nav>
     )

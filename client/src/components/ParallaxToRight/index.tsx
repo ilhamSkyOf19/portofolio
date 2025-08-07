@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer'
 import clsx from 'clsx'
 
 
-const ParallaxToBottom: FC<TypePropsParallax> = ({ children, delay, duration }) => {
+const ParallaxToRight: FC<TypePropsParallax> = ({ children, delay, duration }) => {
     // parallax
     const { ref, inView } = useInView({
         threshold: 0.5,
@@ -12,7 +12,7 @@ const ParallaxToBottom: FC<TypePropsParallax> = ({ children, delay, duration }) 
     })
     return (
         <div ref={ref} className={clsx(
-            inView ? 'back-x' : 'start-to-bottom',
+            inView ? 'back-x' : 'start-to-right',
             delay ? `delay-[${delay}]` : '',
             duration ? duration : 'transition-1'
         )}>
@@ -21,4 +21,4 @@ const ParallaxToBottom: FC<TypePropsParallax> = ({ children, delay, duration }) 
     )
 }
 
-export default ParallaxToBottom
+export default ParallaxToRight
