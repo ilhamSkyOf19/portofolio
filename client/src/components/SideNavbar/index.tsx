@@ -51,6 +51,9 @@ const SideNavbar: FC<Props> = ({ propsRef, active, setSideBar }) => {
         { id: "thankyou", label: "thank you" },
     ]
 
+    // get location url 
+    const sectionActive = window.location.hash.replace('#', '');
+
     return (
         <nav className={clsx(
             'fixed w-full h-full bg-[rgba(0,_0,_0,_0.7)] top-0 left-0 z-50 flex flex-row justify-start items-center transition-opacity duration-500 ease-in-out lg:hidden',
@@ -87,7 +90,7 @@ const SideNavbar: FC<Props> = ({ propsRef, active, setSideBar }) => {
                 <div className='w-full py-8 flex flex-col justify-start items-start relative line'>
                     {
                         menu.map((item, index) => (
-                            <Menu key={index} id={item.id} label={item.label} setSideBar={setSideBar} />
+                            <Menu key={index} id={item.id} label={item.label} setSideBar={setSideBar} active={sectionActive === item.id} />
                         ))
                     }
                 </div>
