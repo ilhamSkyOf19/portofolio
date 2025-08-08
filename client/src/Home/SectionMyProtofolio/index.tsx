@@ -76,7 +76,7 @@ const SectionMyProtofolio: FC = () => {
                                 </ShapeOne>
                             }
                             type={item?.type ?? ''}
-                            title={(item?.title ?? '').slice(0, 50) + '...'}
+                            title={item?.title ?? ''}
                             handleActive={handleActive}
                         />
                     ))
