@@ -5,6 +5,7 @@ import CardCertificate from '../../components/CardCertificate'
 // img
 import certifcateUdemy from '../../assets/sertifikat/e-certificate-udemy.png'
 import ModalCertificate from '../../components/modals/ModalCertificate'
+import ParallaxToTop from '../../components/ParallaxToTop'
 
 const SectionCertificate: FC = () => {
     // state 
@@ -26,7 +27,9 @@ const SectionCertificate: FC = () => {
     return (
         <section id='certificate' className='w-full h-auto py-12 bg-tertiary-light flex flex-col justify-start items-center px-2.5'>
             {/* title */}
-            <TitleSection subJudul='certificate' title='my certificate' />
+            <ParallaxToTop>
+                <TitleSection subJudul='certificate' title='my certificate' />
+            </ParallaxToTop>
             {/* container cards certificate */}
             <div className='grid grid-cols-1 w-full px-2 md:flex md:flex-row place-content-center md:pt-4'>
                 {/* card */}
