@@ -114,6 +114,10 @@
   .start-scale-small {
     @apply scale-0 opacity-0
   }
+
+  .no-scroll {
+    @apply overflow-hidden;
+  }
 }
 
 
@@ -126,6 +130,10 @@ body {
 html {
     scroll-behavior: smooth;
     box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
 }
 
 

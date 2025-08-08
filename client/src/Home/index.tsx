@@ -7,6 +7,7 @@ import SectionAbout from './SectionAbout'
 import SectionMyTech from './SectionMyTech'
 import SectionSkillSetPersentase from './SectionSkillSetPersentase'
 import Footer from './Footer'
+import SectionCertificate from './SectionCertificate'
 
 const Home: FC = () => {
     return (
@@ -17,6 +18,7 @@ const Home: FC = () => {
             <SectionAbout />
             <SectionMyTech />
             <SectionSkillSetPersentase />
+            <SectionCertificate />
             <Footer />
         </LayoutPage>
     )

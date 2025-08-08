@@ -29,6 +29,7 @@ const Navbar: FC<Props> = ({ setSideBar, barRef, showNavbar }) => {
         { id: "aboutme", label: "about me" },
         { id: "mytech", label: "my tech" },
         { id: "skillset", label: "skillset" },
+        { id: "certificate", label: "certificate" },
         { id: "thankyou", label: "thank you" },
     ]
     // get device
