@@ -19,13 +19,13 @@ const SectionThumbnail: FC = () => {
         <section id='home' className='w-full flex flex-col justify-start items-center h-auto bg-tertiary-light pb-24 lg:flex-row-reverse lg:items-start line-black'>
             {/* img */}
             <ThumbnailImage />
-            <div className='w-full flex flex-col justify-start items-start lg:pt-20'>
+            <div className='w-full h-auto flex flex-col justify-start items-start lg:pt-20'>
                 {/* text */}
                 <Describe />
                 {/* social media */}
                 <ParallaxToRight>
                     <div className={clsx(
-                        'w-full flex flex-col justify-start items-start gap-6 px-2 mt-12 md:mt-4 transition-700',
+                        'w-full flex flex-col justify-start items-start gap-6 px-2 mt-16 md:mt-4 transition-700',
                     )}>
                         {/* subjudul social media  */}
                         <SubJudulTextMedium text='find with me' />
@@ -94,7 +94,7 @@ const Describe: FC = () => {
                     )}>hi, i'm <span className='text-primary'>ilham</span></h1>
 
                     {/* text dinamic */}
-                    <div className={`w-full flex flex-row   items-start gap-2 text-3xl font-bold text-white }`}>
+                    <div className={`w-full flex flex-row   items-start gap-2 text-2xl font-bold text-white min-h-[2.5rem]`}>
                         <h2 >a</h2>
                         {/* writer */}
                         <Typewriter

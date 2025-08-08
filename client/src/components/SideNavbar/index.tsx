@@ -83,7 +83,7 @@ const SideNavbar: FC<Props> = ({ propsRef, active, setSideBar }) => {
                     </div>
                     {/* desc */}
                     <TextNormal>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        "I'm a Full Stack Developer — crafting solutions from front-end to back-end."
                     </TextNormal>
                 </div>
 
