@@ -1,14 +1,15 @@
 import { memo, useEffect, useRef, type FC, type RefObject } from 'react'
 import ShadowBox from '../../components/ShadowBox'
-
-
-// img
-import person from '../../assets/img/person/person-hd.png'
 import LazyImage from '../../components/LazyImage'
 import TextNormal from '../../components/TextNormal'
 import TitleSection from '../../components/TitleSection'
 import ParallaxToRight from '../../components/ParallaxToRight'
 import ParallaxToTop from '../../components/ParallaxToTop'
+
+
+// img
+import person from '../../assets/img/person/person-hd.png'
+import { BiSolidQuoteRight } from "react-icons/bi";
 
 const SectionAbout: FC = () => {
 
@@ -34,7 +35,7 @@ const SectionAbout: FC = () => {
 
 
     return (
-        <section id='aboutme' className='w-full h-auto bg-tertiary-light py-16 px-3'>
+        <section id='aboutme' className='w-full h-auto bg-tertiary-light pt-16 pb-3 px-3'>
             {/* title section */}
             <ParallaxToRight>
                 <TitleSection subJudul='A little more about me' title='about me' position='items-start' />
@@ -88,6 +89,16 @@ const SectionAbout: FC = () => {
 
                         </div>
                     </div>
+
+                    {/* line */}
+                    <div className='w-full flex flex-row justify-between items-center mt-12 px-4'>
+                        <div className='flex-3 h-0.5 bg-primary rounded-full' />
+                        <div className='flex-1 flex flex-row justify-center items-center'>
+                            <BiSolidQuoteRight className='text-primary text-5xl' />
+                        </div>
+                        <div className='flex-3 h-0.5 bg-primary rounded-full' />
+                    </div>
+
                     {/* download resume */}
                     <ParallaxToTop>
                         <div className='w-full flex-row justify-center items-center mt-12 lg:justify-start hidden'>
