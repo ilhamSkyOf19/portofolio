@@ -38,7 +38,7 @@ const CardPortofolio: FC<Props> = ({ id, shape, type, title, handleActive }) => 
                         "text-lg font-semibold transition-all duration-300 ease-in-out text-text-primary group/child hover:text-primary",
 
                     )}>
-                        {(title).slice(0, 48) + '...'}
+                        {(title).slice(0, 40) + '...'}
                         <span className="inline-flex items-center ml-1 relative">
                             <MdArrowOutward className={clsx(
                                 "text-primary text-2xl ml-1 origin-bottom-left  transition-all duration-300 ease-in-out absolute -top-4.5 md:translate-y-2.5 md:opacity-0 md:scale-0 md:group-hover:md:translate-y-0 md:group-hover/child:md:opacity-100 md:group-hover/child:md:scale-100",
