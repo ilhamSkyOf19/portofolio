@@ -90,7 +90,7 @@ const SectionAbout: FC = () => {
                     </div>
                     {/* download resume */}
                     <ParallaxToTop>
-                        <div className='w-full flex flex-row justify-center items-center mt-12 lg:justify-start'>
+                        <div className='w-full flex-row justify-center items-center mt-12 lg:justify-start hidden'>
                             {/* button download */}
                             <button type='button' className='uppercase text-primary font-medium text-md bg-tertiary-light rounded-md py-4 px-12 relative transition-all duration-300 ease-in-out md:hover:md:-translate-y-1.5 cursor-pointer hover:bg-tertiary-dark'>
                                 {/* shadow */}
