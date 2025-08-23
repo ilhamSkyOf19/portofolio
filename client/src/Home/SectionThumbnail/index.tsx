@@ -110,20 +110,14 @@ const Describe: FC = () => {
                     </div>
                 </div>
             </ParallaxToRight>
-            {/* description */}
-            <div className={clsx(
-                'w-full min-h-12 mt-6 tracking-[0.05rem] leading-[1.7rem] text-text-primary ',
-            )}>
-                <ParallaxToRight>
-                    <Typewriter
-                        words={['I am a Junior Full Stack Web Developer focused on creating modern, responsive, and efficient web applications, ready to contribute in a professional and collaborative environment.']}
-                        cursor
-                        cursorStyle=''
-                        typeSpeed={10}
-                        delaySpeed={1000}
-                    />
-                </ParallaxToRight>
-            </div>
+            <ParallaxToRight>
+                {/* description */}
+                <p className={clsx(
+                    'w-full min-h-12 mt-6 tracking-[0.05rem] leading-[1.7rem] text-text-primary ',
+                )}>
+                    I am a Junior Full Stack Web Developer focused on creating modern, responsive, and efficient web applications, ready to contribute in a professional and collaborative environment.
+                </p>
+            </ParallaxToRight>
         </div>
     )
 }

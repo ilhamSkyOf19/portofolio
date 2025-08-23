@@ -26,3 +26,14 @@ export type TypeDataPortofolio = {
     database: string[];
     link: string;
 }
+
+
+// type data certificate
+export type TypeDataCertificate = {
+    name: string;
+    img: string;
+    instruktur: string;
+    linkCertificate: string;
+    idCertificate: string;
+    courseProvider: string;
+}

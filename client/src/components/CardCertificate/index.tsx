@@ -1,4 +1,4 @@
-import { type FC } from 'react'
+import { useEffect, useRef, type FC } from 'react'
 import ShadowBox from '../../components/ShadowBox'
 import LazyImage from '../../components/LazyImage'
 import ParallaxToTop from '../ParallaxToTop';
@@ -8,14 +8,41 @@ type Props = {
     category: string;
     title: string;
     instruktur: string;
+    idCertificate: string;
+    linkCertificate: string;
     courseProvider: string;
     img: string;
     handleSetShowModal: (value: boolean) => void;
 }
-const CardCertificate: FC<Props> = ({ category, title, instruktur, courseProvider, img, handleSetShowModal }) => {
+const CardCertificate: FC<Props> = ({ category, title, instruktur, courseProvider, img, handleSetShowModal, idCertificate, linkCertificate }) => {
+
+
+    // handle click
+    const buttonRef = useRef<HTMLButtonElement>(null);
+    const linkRef = useRef<HTMLAnchorElement>(null);
+    useEffect(() => {
+        if (buttonRef.current && linkRef.current) {
+            const target = buttonRef.current;
+            const link = linkRef.current;
+            if (target) {
+                const handleClick = (event: MouseEvent) => {
+                    if (target.contains(event.target as Node) && !link.contains(event.target as Node)) {
+                        handleSetShowModal(true);
+                    }
+                }
+
+                target.addEventListener('click', handleClick);
+                return () => {
+                    target.removeEventListener('click', handleClick);
+                };
+            }
+        }
+    }, [buttonRef])
+
+
     return (
         <ParallaxToTop>
-            <button type='button' className='w-full h-[22rem] bg-tertiary-light relative rounded-xl flex flex-col justify-center items-center md:w-[27rem]' onClick={() => handleSetShowModal(true)}>
+            <button ref={buttonRef} type='button' className='w-full h-[24rem] bg-tertiary-light relative rounded-xl flex flex-col justify-center items-center md:w-[27rem]'>
                 {/* shadow */}
                 <ShadowBox rounded='xl' />
                 {/* img */}
@@ -39,6 +66,17 @@ const CardCertificate: FC<Props> = ({ category, title, instruktur, courseProvide
                         <TextDesc title='instructor' ket={instruktur} />
                         {/* course provider */}
                         <TextDesc title='course provider' ket={courseProvider} />
+                        {/* id certificate */}
+                        <TextDesc title='id certificate' ket={idCertificate} />
+                        {/* link certificate */}
+                        <div className='w-full flex flex-row justify-start items-start gap-2'>
+                            <p className='capitalize text-xs font-normal text-primary text-left'>
+                                link certificate :
+                            </p>
+                            <a ref={linkRef} href={linkCertificate} target='_blank' className='text-xs font-medium text-blue-400 text-left capitalize hover:underline'>
+                                go to link certificate
+                            </a>
+                        </div>
                     </div>
                 </div>
             </button>
@@ -55,11 +93,11 @@ type TextDescProps = {
 // container text desc 
 const TextDesc: FC<TextDescProps> = ({ title, ket }) => {
     return (
-        <div className='flex flex-row justify-start items-start gap-2'>
-            <p className='capitalize text-xs font-normal text-primary'>
+        <div className='w-full flex flex-row justify-start items-start gap-2'>
+            <p className='capitalize text-xs font-normal text-primary text-left'>
                 {title} :
             </p>
-            <p className='text-xs font-medium text-text-primary'>
+            <p className='text-xs font-medium text-text-primary text-left'>
                 {ket}
             </p>
         </div>

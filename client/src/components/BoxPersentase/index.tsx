@@ -18,7 +18,7 @@ const BoxPersentase: FC<Props> = ({ persentase, skill }) => {
                 {/* persentase value */}
                 <div className='h-4.5 relative transition-all duration-[2200ms] ease-in-out' style={{ width: `${persentase ? persentase : 0}%` }}>
                     <p className='text-sm font-normal text-text-primary text-right tracking-[0.1rem]'>
-                        <CountUp start={0} end={persentase ? persentase : 0} duration={1} suffix='%' />
+                        <CountUp start={0} end={persentase ? persentase : 0} duration={3} suffix='%' />
                     </p>
                 </div>
                 {/* persentase bar */}

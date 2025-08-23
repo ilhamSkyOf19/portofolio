@@ -91,13 +91,15 @@ const SectionAbout: FC = () => {
                     </div>
 
                     {/* line */}
-                    <div className='w-full flex flex-row justify-between items-center mt-12 px-4'>
-                        <div className='flex-3 h-0.5 bg-primary rounded-full' />
-                        <div className='flex-1 flex flex-row justify-center items-center'>
-                            <BiSolidQuoteRight className='text-primary text-5xl' />
+                    <ParallaxToTop>
+                        <div className='w-full flex flex-row justify-between items-center mt-12 px-4'>
+                            <div className='flex-3 h-0.5 bg-primary rounded-full' />
+                            <div className='flex-1 flex flex-row justify-center items-center'>
+                                <BiSolidQuoteRight className='text-primary text-5xl' />
+                            </div>
+                            <div className='flex-3 h-0.5 bg-primary rounded-full' />
                         </div>
-                        <div className='flex-3 h-0.5 bg-primary rounded-full' />
-                    </div>
+                    </ParallaxToTop>
 
                     {/* download resume */}
                     <ParallaxToTop>

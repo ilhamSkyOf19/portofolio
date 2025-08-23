@@ -24,18 +24,18 @@ const Footer: FC = () => {
                         </p>
                     </ParallaxToTop>
 
-                    <ParallaxScaleSmall>
+                    <ParallaxToTop>
                         <p className='text-text-primary text-center text-lg leading-[1.7rem]'>
                             – Ilham -
                         </p>
-                    </ParallaxScaleSmall>
+                    </ParallaxToTop>
                 </div>
             </div>
 
             {/* copyright */}
-            <div className='w-full flex flex-row justify-center items-center bg-tertiary-light h-28 relative line-black-before'>
+            <div className='w-full flex flex-row justify-center items-center bg-tertiary-light relative line-black-before h-12 pt-2'>
                 <ParallaxScaleSmall>
-                    <p className='text-text-primary text-center text-lg'>&copy; 2025. All Rights Reserved by Ilham Rohmatulloh.</p>
+                    <p className='text-text-primary text-center text-sm'>&copy; 2025. All Rights Reserved by Ilham Rohmatulloh.</p>
                 </ParallaxScaleSmall>
             </div>
         </footer >
