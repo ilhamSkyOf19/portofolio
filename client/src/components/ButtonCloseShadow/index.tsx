@@ -9,7 +9,7 @@ type Props = {
 }
 const ButtonCloseShadow: FC<Props> = ({ size, action }) => {
     return (
-        <button type='button' className='flex flex-row justify-center items-center bg-tertiary-light rounded-full relative cursor-pointer lg:hover:scale-115 transition-all duration-300 ease-in-out'
+        <button aria-label='close' type='button' className='flex flex-row justify-center items-center bg-tertiary-light rounded-full relative cursor-pointer lg:hover:scale-115 transition-all duration-300 ease-in-out'
             style={{ width: size ? `${size}rem` : '2.5rem', height: size ? `${size}rem` : '2.5rem' }}
             onClick={() => action(false)}
         >

@@ -11,7 +11,7 @@ type Props = {
 
 const Menu: FC<Props> = ({ setSideBar, label, id, size, active }) => {
     return (
-        <a href={`#${id}`} className={clsx(
+        <a href={`#${id}`} aria-label='link' className={clsx(
             'w-full uppercase font-normal text-white opacity-50 transition-all duration-300 ease-in-out hover:opacity-100 py-2.5 md:w-auto',
             size ? size : 'text-md',
             active ? 'opacity-100' : 'opacity-60'

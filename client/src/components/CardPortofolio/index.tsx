@@ -30,7 +30,7 @@ const CardPortofolio: FC<Props> = ({ id, shape, type, title, handleActive }) => 
                 </div>
                 <div className='flex-1 w-full flex flex-col justify-start items-start gap-3 pt-5 cursor-pointer px-2' >
                     {/* type */}
-                    <h3 className='uppercase text-sm font-normat text-primary'>
+                    <h3 className='uppercase text-sm text-primary'>
                         {type}
                     </h3>
                     {/* title */}

@@ -54,7 +54,7 @@ const CardCertificate: FC<Props> = ({ category, title, instruktur, courseProvide
                 {/* desc */}
                 <div className='flex-1/6 w-full flex flex-col justify-start items-start px-3 pt-4 gap-2 md:flex-1/12'>
                     {/* category */}
-                    <h3 className='capitalize text-sm font-light italic text-primary'>
+                    <h3 className='capitalize text-md font-light italic text-[#ff014f]'>
                         {category}
                     </h3>
                     {/* title */}

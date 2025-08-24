@@ -23,7 +23,7 @@ const LazyImage: FC<Props> = ({ src, alt, className, paddingActive }) => {
     return (
         <div ref={ref} className={clsx(
             'overflow-hidden',
-            paddingActive ? 'p-3' : '',
+            paddingActive ? 'p-3' : 'p-0',
         )}>
             {
                 inView && (
@@ -31,7 +31,8 @@ const LazyImage: FC<Props> = ({ src, alt, className, paddingActive }) => {
                         src={src}
                         alt={alt}
                         onLoad={() => setLoaded(true)}
-                        className={`transition-all duration-700 ease-in-out ${loaded ? "opacity-100" : "opacity-0"} ${className || ""}`}
+                        loading='lazy'
+                        className={`transition-all duration-700 ease-in-out ${loaded ? "opacity-100" : "opacity-0"} ${className}`}
                     />
                 )
             }

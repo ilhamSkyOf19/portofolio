@@ -1,4 +1,4 @@
-import { type FC } from 'react'
+import { memo, type FC } from 'react'
 import CountUp from 'react-countup';
 
 type Props = {
@@ -6,6 +6,8 @@ type Props = {
     persentase: number;
 }
 const BoxPersentase: FC<Props> = ({ persentase, skill }) => {
+
+    console.log('render persentase')
     return (
         <div className='w-full flex flex-col justify-start items-start'>
             {/* skill */}
@@ -30,4 +32,4 @@ const BoxPersentase: FC<Props> = ({ persentase, skill }) => {
     )
 }
 
-export default BoxPersentase
+export default memo(BoxPersentase)

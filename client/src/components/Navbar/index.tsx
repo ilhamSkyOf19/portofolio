@@ -74,7 +74,7 @@ const Navbar: FC<Props> = ({ setSideBar, barRef, showNavbar }) => {
             </div>
             {/* bars */}
             <div className='flex-1 flex flex-row justify-end items-center gap-2 lg:hidden'>
-                <button ref={barRef} type='button' onClick={() => setSideBar(true)}  >
+                <button ref={barRef} type='button' aria-label='bars' onClick={() => setSideBar(true)}  >
                     <HiBars3 className='text-4xl text-primary' />
                 </button>
             </div>

@@ -73,7 +73,7 @@ const SideNavbar: FC<Props> = ({ propsRef, active, setSideBar }) => {
                         <Logo width={5.5} />
 
                         {/* button close  */}
-                        <button type='button' className={clsx(
+                        <button type='button' aria-label='close' className={clsx(
                             'flex flex-row justify-center items-center p-2 bg-tertiary-light shadow-2xl shadow-black rounded-full transition-transform duration-700',
                             active ? 'rotate-0' : '-rotate-180'
                         )} onClick={() => setSideBar(false)}>

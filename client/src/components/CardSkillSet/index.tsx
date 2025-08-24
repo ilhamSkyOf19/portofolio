@@ -37,7 +37,7 @@ const CardSkillSet: FC<Props> = ({ data, title, skillSet }) => {
         }
     }, [inView])
 
-
+    console.log('render card skill set')
 
     return (
         <ParallaxToTop>
