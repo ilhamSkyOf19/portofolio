@@ -42,7 +42,7 @@ const CardCertificate: FC<Props> = ({ category, title, instruktur, courseProvide
 
     return (
         <ParallaxToTop>
-            <button ref={buttonRef} type='button' className='w-full h-[24rem] bg-tertiary-light relative rounded-xl flex flex-col justify-center items-center md:w-[27rem]'>
+            <button ref={buttonRef} type='button' className='w-full h-[25.5rem] bg-tertiary-light relative rounded-xl flex flex-col justify-center items-center md:w-[27rem]'>
                 {/* shadow */}
                 <ShadowBox rounded='xl' />
                 {/* img */}
@@ -52,7 +52,7 @@ const CardCertificate: FC<Props> = ({ category, title, instruktur, courseProvide
                     </div>
                 </div>
                 {/* desc */}
-                <div className='flex-1/6 w-full flex flex-col justify-start items-start px-3 pt-4 gap-2 md:flex-1/12'>
+                <div className='flex-1/6 w-full flex flex-col justify-start items-start px-4 pt-4 gap-2 md:flex-1/12'>
                     {/* category */}
                     <h3 className='capitalize text-md font-light italic text-[#ff014f]'>
                         {category}
@@ -70,7 +70,7 @@ const CardCertificate: FC<Props> = ({ category, title, instruktur, courseProvide
                         <TextDesc title='id certificate' ket={idCertificate} />
                         {/* link certificate */}
                         <div className='w-full flex flex-row justify-start items-start gap-2'>
-                            <p className='capitalize text-xs font-normal text-primary text-left'>
+                            <p className='capitalize text-xs font-normal text-primary text-left min-w-26'>
                                 link certificate :
                             </p>
                             <a ref={linkRef} href={linkCertificate} target='_blank' className='text-xs font-medium text-blue-400 text-left capitalize hover:underline'>
@@ -94,7 +94,7 @@ type TextDescProps = {
 const TextDesc: FC<TextDescProps> = ({ title, ket }) => {
     return (
         <div className='w-full flex flex-row justify-start items-start gap-2'>
-            <p className='capitalize text-xs font-normal text-primary text-left'>
+            <p className='capitalize text-xs font-normal text-primary text-left min-w-26'>
                 {title} :
             </p>
             <p className='text-xs font-medium text-text-primary text-left'>
