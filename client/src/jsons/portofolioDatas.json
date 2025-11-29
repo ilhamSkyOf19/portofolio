@@ -1,99 +1,67 @@
 [
-    {
-        "id": 1,
-        "type": "web devlopment",
-        "title": "Modern Organic Company Profile & E-Commerce Website",
-        "highlight": "Fresh Mart adalah website company profile modern yang dirancang untuk menampilkan identitas bisnis yang bergerak di bidang produk segar dan organik. Dengan desain estetika dan efek parallax interaktif, Fresh Mart memberikan kesan profesional, alami, dan terpercaya — cocok untuk audiens yang peduli pada gaya hidup sehat dan berkelanjutan",
-        "design": [
-            "canva"
-        ],
-        "codeEditor": "VS code",
-        "tools": [
-            "Git",
-            "GitHub"
-        ],
-        "framework": [
-            "React + TS",
-            "Tailwindcss",
-            "Next JS"
-        ],
-        "database": [
-            "none"
-        ],
-        "color": "#87ceeb",
-        "link": "https://github.com/ilhamSkyOf19/mern-mart"
-    },
-    {
-        "id": 2,
-        "type": "mobile devlopment",
-        "title": "Aplikasi Mobile Pencatatan Celengan Digital untuk Mengelola dan Memonitor Target Tabungan Secara Praktis, Offline dan Online",
-        "highlight": "Aplikasi Pencatatan Celengan adalah solusi digital berbasis React Native yang dirancang untuk membantu pengguna mencatat, mengelola, dan memantau target tabungan mereka dengan mudah. Aplikasi ini mendukung penggunaan secara offline dengan SQLite serta online melalui integrasi Firebase, sehingga pengguna tetap dapat mengakses dan menyimpan data kapan pun dan di mana pun. Fitur unggulan meliputi autentikasi pengguna, tampilan celengan aktif dan yang telah tercapai, serta halaman profil pengguna. Dengan antarmuka sederhana dan dukungan penyimpanan lokal maupun cloud, aplikasi ini cocok untuk siapa saja yang ingin mengatur keuangan secara lebih terencana.",
-        "design": [
-            "canva",
-            "figma"
-        ],
-        "codeEditor": "VS code",
-        "tools": [
-            "Git",
-            "GitHub"
-        ],
-        "framework": [
-            "React Native",
-            "Expo"
-        ],
-        "database": [
-            "SQLite",
-            "Firebase"
-        ],
-        "color": "#87ceeb",
-        "link": "https://github.com/ilhamSkyOf19/aplikasi-react-native"
-    },
-    {
-        "id": 3,
-        "type": "web devlopment",
-        "title": "SIPONTREN (Sistem Informasi Pondok Pesantren) — Platform Digital Terintegrasi untuk Manajemen Data Pesantren Secara Efisien dan Modern",
-        "highlight": "SIPONTREN mendukung akses online penuh, memungkinkan pengguna untuk mengelola dan memantau data pesantren dari mana saja dan kapan saja selama terhubung dengan internet. Dengan sistem berbasis web yang responsif, administrator, pengajar, maupun pengelola pesantren dapat melakukan pencatatan, pembaruan data, serta mengakses laporan secara real-time. Integrasi online ini juga mempermudah kolaborasi antar bagian dan memastikan bahwa semua informasi yang tersimpan selalu terkini dan sinkron. Selain itu, tersedia fitur pendaftaran santri secara online yang memudahkan proses administrasi masuk pesantren tanpa harus datang langsung, menjadikan proses lebih efisien dan terstruktur.",
-        "design": [
-            "canva",
-            "figma"
-        ],
-        "codeEditor": "VS code",
-        "tools": [
-            "Git",
-            "GitHub"
-        ],
-        "framework": [
-            "React + JS",
-            "Tailwindcss"
-        ],
-        "database": [
-            "MySQL"
-        ],
-        "color": "#87ceeb",
-        "link": "https://github.com/ilhamSkyOf19/Sipontren"
-    },
-    {
-        "id": 4,
-        "type": "web devlopment",
-        "title": "ETOKO Fresh Mart — Website Fake E-Commerce Modern dengan Integrasi Full API",
-        "highlight": "Fresh Mart adalah platform digital modern berbasis React.js dengan TypeScript yang menghadirkan pengalaman belanja produk segar, organik, dan berkualitas tinggi secara online. Website ini menampilkan berbagai produk seperti buah-buahan, sayuran segar, wine artisan, hingga roti sourdough—dengan tampilan dinamis berkat efek Parallax yang interaktif dan user-friendly. Di sisi backend, Fresh Mart dibangun menggunakan Next.js dengan App Router, memungkinkan pengelolaan API dan server-side logic secara terstruktur dan efisien. Seluruh data disimpan di MongoDB Atlas dan dikelola menggunakan Prisma ORM, menjadikan manajemen database lebih fleksibel dan scalable. Kombinasi teknologi modern ini memastikan performa optimal sekaligus mendukung pengalaman pengguna yang cepat, aman, dan responsif.",
-        "design": [
-            "canva"
-        ],
-        "codeEditor": "VS code",
-        "tools": [
-            "Git",
-            "GitHub"
-        ],
-        "framework": [
-            "React + TS",
-            "Tailwindcss",
-            "Next.js"
-        ],
-        "database": [
-            "MongoDB Atlas"
-        ],
-        "color": "#87ceeb",
-        "link": "https://github.com/ilhamSkyOf19/fake-ecommerce-fresh-mart"
-    }
+  {
+    "id": 1,
+    "type": "web devlopment",
+    "title": "Modern Organic Company Profile & E-Commerce Website",
+    "highlight": "Fresh Mart adalah website company profile modern yang dirancang untuk menampilkan identitas bisnis yang bergerak di bidang produk segar dan organik. Dengan desain estetika dan efek parallax interaktif, Fresh Mart memberikan kesan profesional, alami, dan terpercaya — cocok untuk audiens yang peduli pada gaya hidup sehat dan berkelanjutan",
+    "design": ["canva"],
+    "codeEditor": "VS code",
+    "tools": ["Git", "GitHub"],
+    "framework": ["React + TS", "Tailwindcss", "Next JS"],
+    "database": ["none"],
+    "color": "#87ceeb",
+    "link": "https://github.com/ilhamSkyOf19/mern-mart"
+  },
+  {
+    "id": 2,
+    "type": "mobile devlopment",
+    "title": "Aplikasi Mobile Pencatatan Celengan Digital untuk Mengelola dan Memonitor Target Tabungan Secara Praktis, Offline dan Online",
+    "highlight": "Aplikasi Pencatatan Celengan adalah solusi digital berbasis React Native yang dirancang untuk membantu pengguna mencatat, mengelola, dan memantau target tabungan mereka dengan mudah. Aplikasi ini mendukung penggunaan secara offline dengan SQLite serta online melalui integrasi Firebase, sehingga pengguna tetap dapat mengakses dan menyimpan data kapan pun dan di mana pun. Fitur unggulan meliputi autentikasi pengguna, tampilan celengan aktif dan yang telah tercapai, serta halaman profil pengguna. Dengan antarmuka sederhana dan dukungan penyimpanan lokal maupun cloud, aplikasi ini cocok untuk siapa saja yang ingin mengatur keuangan secara lebih terencana.",
+    "design": ["canva", "figma"],
+    "codeEditor": "VS code",
+    "tools": ["Git", "GitHub"],
+    "framework": ["React Native", "Expo"],
+    "database": ["SQLite", "Firebase"],
+    "color": "#87ceeb",
+    "link": "https://github.com/ilhamSkyOf19/aplikasi-react-native"
+  },
+  {
+    "id": 3,
+    "type": "web devlopment",
+    "title": "SIPONTREN (Sistem Informasi Pondok Pesantren) — Platform Digital Terintegrasi untuk Manajemen Data Pesantren Secara Efisien dan Modern",
+    "highlight": "SIPONTREN mendukung akses online penuh, memungkinkan pengguna untuk mengelola dan memantau data pesantren dari mana saja dan kapan saja selama terhubung dengan internet. Dengan sistem berbasis web yang responsif, administrator, pengajar, maupun pengelola pesantren dapat melakukan pencatatan, pembaruan data, serta mengakses laporan secara real-time. Integrasi online ini juga mempermudah kolaborasi antar bagian dan memastikan bahwa semua informasi yang tersimpan selalu terkini dan sinkron. Selain itu, tersedia fitur pendaftaran santri secara online yang memudahkan proses administrasi masuk pesantren tanpa harus datang langsung, menjadikan proses lebih efisien dan terstruktur.",
+    "design": ["canva", "figma"],
+    "codeEditor": "VS code",
+    "tools": ["Git", "GitHub"],
+    "framework": ["React + JS", "Tailwindcss"],
+    "database": ["MySQL"],
+    "color": "#87ceeb",
+    "link": "https://github.com/ilhamSkyOf19/Sipontren"
+  },
+  {
+    "id": 4,
+    "type": "web devlopment",
+    "title": "ETOKO Fresh Mart — Website Fake E-Commerce Modern dengan Integrasi Full API",
+    "highlight": "Fresh Mart adalah platform digital modern berbasis React.js dengan TypeScript yang menghadirkan pengalaman belanja produk segar, organik, dan berkualitas tinggi secara online. Website ini menampilkan berbagai produk seperti buah-buahan, sayuran segar, wine artisan, hingga roti sourdough—dengan tampilan dinamis berkat efek Parallax yang interaktif dan user-friendly. Di sisi backend, Fresh Mart dibangun menggunakan Next.js dengan App Router, memungkinkan pengelolaan API dan server-side logic secara terstruktur dan efisien. Seluruh data disimpan di MongoDB Atlas dan dikelola menggunakan Prisma ORM, menjadikan manajemen database lebih fleksibel dan scalable. Kombinasi teknologi modern ini memastikan performa optimal sekaligus mendukung pengalaman pengguna yang cepat, aman, dan responsif.",
+    "design": ["canva"],
+    "codeEditor": "VS code",
+    "tools": ["Git", "GitHub"],
+    "framework": ["React + TS", "Tailwindcss", "Next.js"],
+    "database": ["MongoDB Atlas"],
+    "color": "#87ceeb",
+    "link": "https://github.com/ilhamSkyOf19/fake-ecommerce-fresh-mart"
+  },
+  {
+    "id": 5,
+    "type": "web devlopment",
+    "title": "Cinema Ticketing Website — Website Fake Cinema Ticketing dengan Integrasi Full API",
+    "highlight": "Website ini adalah platform penjualan tiket bioskop yang memungkinkan pengguna untuk membeli tiket film, mengelola saldo wallet, dan melakukan transaksi pembayaran secara online. Terdapat dua jenis pengguna: Admin dan Customer, masing-masing dengan fitur dan akses berbeda.",
+    "design": ["figma"],
+    "codeEditor": "VS code",
+    "tools": ["Git", "GitHub", "postman", "XAMPP"],
+    "framework": ["React + TS", "Tailwindcss", "Express.js"],
+    "database": ["MySQL", "Prisma ORM"],
+    "color": "#87ceeb",
+    "link": "https://github.com/ilhamSkyOf19/ilham-ticket"
+  }
 ]
